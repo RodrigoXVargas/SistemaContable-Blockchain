@@ -23,5 +23,12 @@ namespace capaPresentacion
             frAccount frAccount = new frAccount();
             frAccount.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main main = new Main();
+            main.Show();
+        }
     }
 }

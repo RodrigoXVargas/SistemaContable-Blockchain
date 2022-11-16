@@ -29,7 +29,7 @@ namespace capaPresentacion
             bool resultado;
             Account account = new Account();
 
-            account.Id = (int) txtID.Value;
+            account.Id = (int)txtID.Value;
             account.Name = txtNombre.Text;
 
             resultado = accountNegocio.ValidarDatos(account);
@@ -78,15 +78,17 @@ namespace capaPresentacion
 
         private void gridDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if((int)gridDatos.CurrentRow.Cells["id"].Value != 0)
+
+            try
+            {
+                txtID.Value = (int)gridDatos.CurrentRow.Cells["id"].Value;
+                txtNombre.Text = gridDatos.CurrentRow.Cells["name"].Value.ToString();
+            }
+            catch
             {
                 txtID.Value = 0;
                 txtNombre.Text = "";
             }
-                
-
-            txtID.Value = (int)gridDatos.CurrentRow.Cells["id"].Value;
-            txtNombre.Text = gridDatos.CurrentRow.Cells["name"].Value.ToString();
 
         }
 

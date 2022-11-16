@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.NumericUpDown();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.ofdFoto = new System.Windows.Forms.OpenFileDialog();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -74,10 +73,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 23);
             this.txtNombre.TabIndex = 5;
-            // 
-            // ofdFoto
-            // 
-            this.ofdFoto.FileName = "openFileDialog1";
             // 
             // btnNuevo
             // 
@@ -161,7 +156,6 @@
         private Label label2;
         private NumericUpDown txtID;
         private TextBox txtNombre;
-        private OpenFileDialog ofdFoto;
         private Button btnNuevo;
         private Button btnEliminar;
         private Button btnGuardar;
