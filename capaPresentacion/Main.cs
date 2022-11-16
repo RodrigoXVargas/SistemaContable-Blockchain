@@ -16,5 +16,12 @@ namespace capaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btnCarga_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new_Seat new_Seat = new new_Seat();
+            new_Seat.Show();
+        }
     }
 }

@@ -107,6 +107,7 @@
             this.btn_NewAccount.TabIndex = 7;
             this.btn_NewAccount.Text = "Cargar nueva Cuenta";
             this.btn_NewAccount.UseVisualStyleBackColor = true;
+            this.btn_NewAccount.Click += new System.EventHandler(this.btn_NewAccount_Click);
             // 
             // btn_newSeat
             // 

@@ -35,16 +35,17 @@
             // 
             // btnCarga
             // 
-            this.btnCarga.Location = new System.Drawing.Point(38, 35);
+            this.btnCarga.Location = new System.Drawing.Point(38, 34);
             this.btnCarga.Name = "btnCarga";
             this.btnCarga.Size = new System.Drawing.Size(289, 28);
             this.btnCarga.TabIndex = 0;
             this.btnCarga.Text = "Carga de Datos";
             this.btnCarga.UseVisualStyleBackColor = true;
+            this.btnCarga.Click += new System.EventHandler(this.btnCarga_Click);
             // 
             // btnLibroDiario
             // 
-            this.btnLibroDiario.Location = new System.Drawing.Point(38, 101);
+            this.btnLibroDiario.Location = new System.Drawing.Point(38, 86);
             this.btnLibroDiario.Name = "btnLibroDiario";
             this.btnLibroDiario.Size = new System.Drawing.Size(289, 27);
             this.btnLibroDiario.TabIndex = 1;
@@ -53,7 +54,7 @@
             // 
             // btnLibroMayor
             // 
-            this.btnLibroMayor.Location = new System.Drawing.Point(38, 164);
+            this.btnLibroMayor.Location = new System.Drawing.Point(38, 134);
             this.btnLibroMayor.Name = "btnLibroMayor";
             this.btnLibroMayor.Size = new System.Drawing.Size(289, 25);
             this.btnLibroMayor.TabIndex = 2;

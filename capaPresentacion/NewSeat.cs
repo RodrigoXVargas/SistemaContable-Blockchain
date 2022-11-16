@@ -16,5 +16,12 @@ namespace capaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btn_NewAccount_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frAccount frAccount = new frAccount();
+            frAccount.Show();
+        }
     }
 }
