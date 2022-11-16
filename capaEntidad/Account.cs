@@ -1,5 +1,6 @@
 ﻿namespace capaEntidad
 {
+    [Serializable]
     public class Account
     {
         private int id;
