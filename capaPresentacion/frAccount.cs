@@ -1,6 +1,6 @@
-using capaEntidad;
+using capaDatos;
 using capaNegocio;
-using capaEntidad;
+using capaDatos;
 
 namespace capaPresentacion
 {

@@ -4,34 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace capaEntidad
+namespace capaDatos
 {
     [Serializable]
     public class Block
     {
 
-        private long id;
-        private string hash;
-        private string previusHash;
-        private List<Seats> fk_seats;
+        public long Id { get; set; }
+        public string Descripcion;
+        public string Fecha;
+        public DateTime Timestamp { get; set; }
+        public Account[] Account { get; set; }
+        public string Hash { get; set; }
+        public string PreviousHash { get; set; }
+        public int proof { get; set; }
 
-        internal Block(long id, string hash, string previusHash, List<Seats> fk_seats)
+
+        public Block(int index, List<Account> cuentas, string previousHash, String descripcion, String fecha)
         {
-            this.id = id;
-            this.hash = hash;
-            this.previusHash = previusHash;
-            this.fk_seats = fk_seats;
+            Fecha = fecha;
+            Descripcion = descripcion;
+            Id = index;
+            Account = cuentas != null ? cuentas.ToArray() : new Account[0];
+            Timestamp = DateTime.Now;
+            PreviousHash = previousHash;
+
         }
-
-        internal Block()
-        {
-        }
-
-        public long Id { get => id; set => id = value; }
-        public string Hash { get => hash; set => hash = value; }
-        public string PreviusHash { get => previusHash; set => previusHash = value; }
-        internal List<Seats> Fk_seats { get => fk_seats; set => fk_seats = value; }
-
-
     }
 }

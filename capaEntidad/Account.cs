@@ -1,22 +1,33 @@
-﻿namespace capaEntidad
+﻿using capaDatos;
+
+namespace capaDatos
 {
-    [Serializable]
+    
     public class Account
     {
-        private int id;
-        private String name;
+        public string fecha { get; set; }
+        public string nombre { get; set; }
+        public float debe { get; set; }
+        public float haber { get; set; }
+        public int tipo { get; set; }
 
-        public int Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
+        public string Hash { get { return HashHelper.CalculateHash(string.Format("{0}{1}{2}{3}{4}", nombre, tipo, debe, haber, fecha)); } }
 
-        public Account(int id, string name)
+        public Account(string nombre, int tipo, float monto, int debeOHaber, string fecha)
         {
-            this.id = id;
-            this.name = name;
-        }
+            this.fecha = fecha;
+            this.nombre = nombre;
+            this.tipo = tipo;
 
-        public Account()
-        {
+            if (debeOHaber == 0)
+            {
+                this.debe = monto;
+            }
+            else
+            {
+                this.haber = monto;
+            }
+
         }
 
     }

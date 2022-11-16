@@ -1,4 +1,4 @@
-﻿using capaEntidad;
+﻿using capaDatos;
 using System.Windows.Forms;
 using capaDatos;
 using System.Data;

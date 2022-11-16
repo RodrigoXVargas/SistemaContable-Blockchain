@@ -1,6 +1,6 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
-using capaEntidad;
+using capaDatos;
 using capaDatos;
 using System.Data;
 

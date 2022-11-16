@@ -1,3 +1,5 @@
+using capaDatos;
+
 namespace capaPresentacion
 {
     internal static class Program
@@ -12,6 +14,8 @@ namespace capaPresentacion
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
+
+            Blockchain blockchain = new Blockchain();
         }
     }
 }
