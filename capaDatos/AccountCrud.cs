@@ -6,7 +6,7 @@ using System.Data;
 
 namespace capaDatos
 {
-    public class AccountData
+    public class AccountCrud
     {
         string CadenaConexion = "Server=localhost;User=root;Password=;Port=3306;database=contabilidad_db";
 
@@ -32,7 +32,7 @@ namespace capaDatos
         {
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
             mySqlConnection.Open();
-            string Query = "INSERT INTO `accounts` (`name`) VALUES ('"+ account.name + "');";
+            string Query = "INSERT INTO `accounts` (`name`) VALUES ('"+ account.Name + "');";
             MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
             mySqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
@@ -44,7 +44,7 @@ namespace capaDatos
         {
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
             mySqlConnection.Open();
-            string Query = "UPDATE `accounts` SET `name`='"+ account.name +"' WHERE  `id`="+ account.id +";";
+            string Query = "UPDATE `accounts` SET `name`='"+ account.Name +"' WHERE  `id`="+ account.Id +";";
             MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
             mySqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
@@ -56,7 +56,7 @@ namespace capaDatos
         {
             MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
             mySqlConnection.Open();
-            string Query = "DELETE FROM `accounts` WHERE  `id`="+ account.id + ";";
+            string Query = "DELETE FROM `accounts` WHERE  `id`="+ account.Id + ";";
             MySqlCommand mySqlCommand = new MySqlCommand(Query, mySqlConnection);
             mySqlCommand.ExecuteNonQuery();
             mySqlConnection.Close();
