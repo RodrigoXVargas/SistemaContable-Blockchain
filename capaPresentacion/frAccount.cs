@@ -78,11 +78,23 @@ namespace capaPresentacion
 
         private void gridDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if((int)gridDatos.CurrentRow.Cells["id"].Value != 0)
+            {
+                txtID.Value = 0;
+                txtNombre.Text = "";
+            }
+                
+
             txtID.Value = (int)gridDatos.CurrentRow.Cells["id"].Value;
             txtNombre.Text = gridDatos.CurrentRow.Cells["name"].Value.ToString();
 
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new_Seat new_Seat = new new_Seat();
+            new_Seat.Show();
+        }
     }
 }
