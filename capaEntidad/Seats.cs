@@ -7,7 +7,7 @@ using capaEntidad;
 
 namespace capaEntidad
 {
-    internal class Seats
+    public class Seats
     {
 
         private long id;
@@ -16,8 +16,8 @@ namespace capaEntidad
 
         public long Id { get => id; set => id = value; }
         public DateTime Date { get => date; set => date = value; }
-        public List<Movement> Fk_movement { get => fk_movement; set => fk_movement = value; }
-        public Seats(int id, DateTime date, List<Movement> fk_movement)
+        internal List<Movement> Fk_movement { get => fk_movement; set => fk_movement = value; }
+        internal Seats(int id, DateTime date, List<Movement> fk_movement)
         {
             this.id = id;
             this.date = date;
@@ -27,5 +27,6 @@ namespace capaEntidad
         public Seats()
         {
         }
+
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace capaEntidad
 {
-    internal class Class1
+    public class Blockchain
     {
+
+
     }
 }
