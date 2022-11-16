@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 351);
+            this.ClientSize = new System.Drawing.Size(731, 310);
             this.Controls.Add(this.gridDatos);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEliminar);
@@ -131,6 +131,8 @@
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(747, 349);
+            this.MinimumSize = new System.Drawing.Size(747, 349);
             this.Name = "frAccount";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frClientes_Load);
