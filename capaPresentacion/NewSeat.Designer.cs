@@ -38,6 +38,7 @@
             this.btn_NewAccount = new System.Windows.Forms.Button();
             this.btn_newSeat = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -168,5 +169,6 @@
         private Button btn_NewAccount;
         private Button btn_newSeat;
         private Button btnVolver;
+        private Button button1;
     }
 }
