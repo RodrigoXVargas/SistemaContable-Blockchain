@@ -1,5 +1,6 @@
 using capaEntidad;
 using capaNegocio;
+using capaEntidad;
 
 namespace capaPresentacion
 {
@@ -81,5 +82,7 @@ namespace capaPresentacion
             txtNombre.Text = gridDatos.CurrentRow.Cells["name"].Value.ToString();
 
         }
+
+       
     }
 }
