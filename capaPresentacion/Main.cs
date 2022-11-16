@@ -23,5 +23,19 @@ namespace capaPresentacion
             new_Seat new_Seat = new new_Seat();
             new_Seat.Show();
         }
+
+        private void btnLibroDiario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DiaryBook dBook = new DiaryBook();
+            dBook.Show();
+        }
+
+        private void btnLibroMayor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ledger ledger = new Ledger();
+            ledger.Show();
+        }
     }
 }
