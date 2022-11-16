@@ -32,7 +32,6 @@ namespace capaDatos
         public void Crear(Account account)
         {
             MySqlConnection conexion = Base.Conectar();
-            conexion.Open();
             string Query = "INSERT INTO `accounts` (`name`) VALUES ('"+ account.Name + "');";
             MySqlCommand mySqlCommand = new MySqlCommand(Query, conexion);
             mySqlCommand.ExecuteNonQuery();
@@ -68,10 +67,9 @@ namespace capaDatos
         public DataSet Listar()
         {
             MySqlConnection conexion = Base.Conectar();
-            conexion.Open();
             string Query = "SELECT  `id`, `name` FROM `accounts` LIMIT 1000;";
             MySqlDataAdapter Adaptador;
-            DataSet dataSet = new DataSet("");
+            DataSet dataSet = new DataSet();
 
             Adaptador = new MySqlDataAdapter(Query, conexion);
             Adaptador.Fill(dataSet, "accounts");
