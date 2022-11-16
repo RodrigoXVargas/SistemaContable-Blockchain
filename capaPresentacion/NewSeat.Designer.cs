@@ -31,12 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.date_Seat = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboCuentas = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btn_NewMovement = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_NewAccount = new System.Windows.Forms.Button();
             this.btn_newSeat = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -66,13 +67,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Carga de Movimientos";
             // 
-            // comboBox1
+            // comboCuentas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(23, 132);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 3;
+            this.comboCuentas.FormattingEnabled = true;
+            this.comboCuentas.Location = new System.Drawing.Point(23, 132);
+            this.comboCuentas.Name = "comboCuentas";
+            this.comboCuentas.Size = new System.Drawing.Size(121, 23);
+            this.comboCuentas.TabIndex = 3;
             // 
             // numericUpDown1
             // 
@@ -118,17 +119,28 @@
             this.btn_newSeat.Text = "Cargar Asiento";
             this.btn_newSeat.UseVisualStyleBackColor = true;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(48, 344);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 9;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // new_Seat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 401);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btn_newSeat);
             this.Controls.Add(this.btn_NewAccount);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_NewMovement);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboCuentas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.date_Seat);
             this.Controls.Add(this.label1);
@@ -136,6 +148,7 @@
             this.MinimumSize = new System.Drawing.Size(816, 440);
             this.Name = "new_Seat";
             this.Text = "Carga de Asiento";
+            this.Load += new System.EventHandler(this.new_Seat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -148,11 +161,12 @@
         private Label label1;
         private DateTimePicker date_Seat;
         private Label label2;
-        private ComboBox comboBox1;
+        private ComboBox comboCuentas;
         private NumericUpDown numericUpDown1;
         private Button btn_NewMovement;
         private DataGridView dataGridView1;
         private Button btn_NewAccount;
         private Button btn_newSeat;
+        private Button btnVolver;
     }
 }
