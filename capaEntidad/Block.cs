@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace capaEntidad
 {
+    [Serializable]
     public class Block
     {
 
