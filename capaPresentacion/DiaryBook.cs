@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using capaDatos;
+using capaEntidad;
 
 namespace capaPresentacion
 {
     public partial class DiaryBook : Form
     {
+        Blockchain bc = Base.ReadBlockchain();
         public DiaryBook()
         {
             InitializeComponent();
@@ -28,8 +31,16 @@ namespace capaPresentacion
         {
             DateTime from = dateFrom.Value.Date;
             DateTime to = dateTo.Value.Date;
+            List<Seat> seats = new List<Seat>();
 
             if (from > to) MessageBox.Show("Introduzca bien las fechas");
+            else
+            {
+                for (int i = 0; i < bc._Blocks.Count; i++)
+                {
+                    if (bc._Blocks[i]._Seat._Date >= from && bc._Blocks[i]._Seat._Date <= to) seats.Add(bc._Blocks[i]._Seat);
+                }
+            }
 
 
         }
