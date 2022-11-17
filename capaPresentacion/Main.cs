@@ -59,6 +59,7 @@ namespace capaPresentacion
             {
                 MessageBox.Show("No Persistido. Bye");
             }
+            this.Close();
         }
     }
 }
