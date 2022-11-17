@@ -20,18 +20,6 @@ namespace capaPresentacion
 
         private void btnCarga_Click(object sender, EventArgs e)
         {
-            Blockchain b = new Blockchain();
-            Account account = new Account("caja", 2, 2, 1, "2/10/22");
-
-
-            if (Base.PersistBlockchain(b))
-            {
-                MessageBox.Show("SI");
-            }
-            else
-            {
-                MessageBox.Show("NO");
-            }
             this.Hide();
             new_Seat new_Seat = new new_Seat();
             new_Seat.Show();
