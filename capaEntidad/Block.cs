@@ -14,7 +14,7 @@ namespace capaDatos
         private String descripcion;
         private String fecha;
         private DateTime timestamp;
-        private Seats[] seats;
+        private Seat seat;
         private String hash;
         private String previousHash;
         private int proof;
@@ -23,7 +23,7 @@ namespace capaDatos
         public string _Descripcion { get => descripcion; set => descripcion = value; }
         public string _Fecha { get => fecha; set => fecha = value; }
         public DateTime _Timestamp { get => timestamp; set => timestamp = value; }
-        public Seats[] _Seats { get => seats; set => seats = value; }
+        public Seat _Seat { get => seat; set => seat = value; }
         public string _Hash { get => hash; set => hash = value; }
         public string _PreviousHash { get => previousHash; set => previousHash = value; }
         public int _Proof { get => proof; set => proof = value; }
@@ -32,13 +32,13 @@ namespace capaDatos
         {
         }
 
-        public Block(long id, string descripcion, string fecha, DateTime timestamp, Seats[] seats, string hash, string previousHash, int proof)
+        public Block(long id, string descripcion, string fecha, DateTime timestamp, Seat seat, string hash, string previousHash, int proof)
         {
             _Id = id;
             _Descripcion = descripcion;
             _Fecha = fecha;
             _Timestamp = timestamp;
-            _Seats = seats;
+            _Seat = seat;
             _Hash = hash;
             _PreviousHash = previousHash;
             _Proof = proof;

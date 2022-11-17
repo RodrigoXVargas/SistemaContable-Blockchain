@@ -7,7 +7,7 @@ using capaDatos;
 
 namespace capaDatos
 {
-    public class Seats
+    public class Seat
     {
 
         private long id;
@@ -17,14 +17,14 @@ namespace capaDatos
         public long _Id { get => id; set => id = value; }
         public DateTime _Date { get => date; set => date = value; }
         public List<Account> _Account { get => account; set => account = value; }
-        internal Seats(int id, DateTime date, List<Account> account)
+        internal Seat(int id, DateTime date, List<Account> account)
         {
             _Id = id;
             _Date = date;
             _Account = account;
         }
 
-        public Seats()
+        public Seat()
         {
         }
 

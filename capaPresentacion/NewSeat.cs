@@ -35,6 +35,7 @@ namespace capaPresentacion
                 cuentas.Items.Add(item);
 
             debeHaber.Items.Add("Debe");
+            debeHaber.Items.Add("Haber");
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
