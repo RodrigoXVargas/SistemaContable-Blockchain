@@ -24,23 +24,13 @@ namespace capaEntidad
         {
 
             String myHashCalculated = String.Empty;
-
-
             using (SHA256 mySHA256 = SHA256.Create())
             {
-
-
                 byte[] encodedText = new UTF8Encoding().GetBytes(text);
-
-
                 byte[] myHashArray = mySHA256.ComputeHash(encodedText);
-
-
                 myHashCalculated = BitConverter.ToString(myHashArray).Replace("-", String.Empty);          //Replace("-", string.Empty) ==> el byte array tiene guines en medio(segun el que explica en el video), esta funcion quita los guiones
 
             }
-
-
             return myHashCalculated;
         }
 
@@ -60,7 +50,6 @@ namespace capaEntidad
 
             do
             {
-
                 text = String.Format("{0}{1}{2}", seat._Date, seat._HashSeat, proof);
                 hash = Miner.CalculateHash(text);
                 proof++;
