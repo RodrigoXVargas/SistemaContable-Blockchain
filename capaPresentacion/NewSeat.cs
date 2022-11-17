@@ -32,7 +32,7 @@ namespace capaPresentacion
             Base persistence = new Base();
 
             foreach (string item in persistence.carga_combo())
-                comboCuentas.Items.Add(item);
+                cuentas.Items.Add(item);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
