@@ -14,14 +14,14 @@ namespace capaDatos
         private DateTime date;
         private List<Account> account = new List<Account>();
 
-        public long Id { get => id; set => id = value; }
-        public DateTime Date { get => date; set => date = value; }
-        public List<Account> Account { get => account; set => account = value; }
+        public long _Id { get => id; set => id = value; }
+        public DateTime _Date { get => date; set => date = value; }
+        public List<Account> _Account { get => account; set => account = value; }
         internal Seats(int id, DateTime date, List<Account> account)
         {
-            this.id = id;
-            this.date = date;
-            this.account = account;
+            _Id = id;
+            _Date = date;
+            _Account = account;
         }
 
         public Seats()

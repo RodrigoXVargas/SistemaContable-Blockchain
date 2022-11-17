@@ -19,14 +19,14 @@ namespace capaDatos
         private String previousHash;
         private int proof;
 
-        public long Id { get => id; set => id = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
-        public string Fecha { get => fecha; set => fecha = value; }
-        public DateTime Timestamp { get => timestamp; set => timestamp = value; }
-        public Seats[] Seats { get => seats; set => seats = value; }
-        public string Hash { get => hash; set => hash = value; }
-        public string PreviousHash { get => previousHash; set => previousHash = value; }
-        public int Proof { get => proof; set => proof = value; }
+        public long _Id { get => id; set => id = value; }
+        public string _Descripcion { get => descripcion; set => descripcion = value; }
+        public string _Fecha { get => fecha; set => fecha = value; }
+        public DateTime _Timestamp { get => timestamp; set => timestamp = value; }
+        public Seats[] _Seats { get => seats; set => seats = value; }
+        public string _Hash { get => hash; set => hash = value; }
+        public string _PreviousHash { get => previousHash; set => previousHash = value; }
+        public int _Proof { get => proof; set => proof = value; }
 
         public Block()
         {
@@ -34,14 +34,14 @@ namespace capaDatos
 
         public Block(long id, string descripcion, string fecha, DateTime timestamp, Seats[] seats, string hash, string previousHash, int proof)
         {
-            Id = id;
-            Descripcion = descripcion;
-            Fecha = fecha;
-            Timestamp = timestamp;
-            Seats = seats;
-            Hash = hash;
-            PreviousHash = previousHash;
-            Proof = proof;
+            _Id = id;
+            _Descripcion = descripcion;
+            _Fecha = fecha;
+            _Timestamp = timestamp;
+            _Seats = seats;
+            _Hash = hash;
+            _PreviousHash = previousHash;
+            _Proof = proof;
         }
 
     }
