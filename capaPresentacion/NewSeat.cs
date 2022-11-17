@@ -95,20 +95,16 @@ namespace capaPresentacion
                     accountList.Add(account);
                 }
 
-                Seat seat = new Seat();
-                seat._Id = 1;
-                seat._Date = date_Seat.Value.Date;
-                seat._Name = textBox1.Text;
-                seat._Account = accountList;
+                Seat seat = new Seat(date_Seat.Value.Date, textBox1.Text, accountList);
 
-                Block block = new Block();
-                block._Seat = seat;
-                block._Id = 1;
+                Block block = new Block(seat);
 
                 Blockchain blockchain = new Blockchain();
                 blockchain._Blocks.Add(block);
 
+                Base.PersistBlockchain(blockchain);
                 MessageBox.Show("Carga exitosa");
+                                
 
             }
             catch

@@ -12,21 +12,18 @@ namespace capaDatos
     public class Seat
     {
 
-        private long id;
         private DateTime date;
         private String name;
         private List<Account> account = new List<Account>();
         private String hashSeat;
 
-        public long _Id { get => id; set => id = value; }
         public DateTime _Date { get => date; set => date = value; }
         public List<Account> _Account { get => account; set => account = value; }
         public string _Name { get => name; set => name = value; }
         public String _HashSeat { get => hashSeat; set => hashSeat = Miner.CalculateHash(value); }
 
-        internal Seat(int id, DateTime date, String name, List<Account> account)
+        public Seat(DateTime date, String name, List<Account> account)
         {
-            _Id = id;
             _Date = date;
             _Name = name;
             _Account = account;
