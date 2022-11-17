@@ -55,7 +55,7 @@
             // 
             this.date_Seat.Location = new System.Drawing.Point(134, 37);
             this.date_Seat.Name = "date_Seat";
-            this.date_Seat.Size = new System.Drawing.Size(322, 23);
+            this.date_Seat.Size = new System.Drawing.Size(388, 23);
             this.date_Seat.TabIndex = 1;
             // 
             // label2
@@ -78,7 +78,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(438, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(504, 48);
             this.dataGridView1.TabIndex = 6;
             // 
             // cuentas
@@ -104,7 +104,7 @@
             // 
             // btn_newSeat
             // 
-            this.btn_newSeat.Location = new System.Drawing.Point(18, 342);
+            this.btn_newSeat.Location = new System.Drawing.Point(413, 213);
             this.btn_newSeat.Name = "btn_newSeat";
             this.btn_newSeat.Size = new System.Drawing.Size(109, 23);
             this.btn_newSeat.TabIndex = 8;
@@ -113,7 +113,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(381, 342);
+            this.btnVolver.Location = new System.Drawing.Point(18, 213);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 9;
@@ -133,14 +133,14 @@
             this.textBox1.Location = new System.Drawing.Point(149, 74);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 23);
+            this.textBox1.Size = new System.Drawing.Size(373, 23);
             this.textBox1.TabIndex = 10;
             // 
             // new_Seat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 399);
+            this.ClientSize = new System.Drawing.Size(534, 246);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btn_newSeat);
@@ -148,8 +148,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.date_Seat);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(816, 438);
-            this.MinimumSize = new System.Drawing.Size(816, 438);
+            this.MaximumSize = new System.Drawing.Size(550, 285);
+            this.MinimumSize = new System.Drawing.Size(550, 285);
             this.Name = "new_Seat";
             this.Text = "Carga de Asiento";
             this.Load += new System.EventHandler(this.new_Seat_Load);
