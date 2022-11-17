@@ -35,7 +35,6 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btn_NewMovement = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_NewAccount = new System.Windows.Forms.Button();
             this.btn_newSeat = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -73,21 +72,21 @@
             this.comboCuentas.FormattingEnabled = true;
             this.comboCuentas.Location = new System.Drawing.Point(23, 132);
             this.comboCuentas.Name = "comboCuentas";
-            this.comboCuentas.Size = new System.Drawing.Size(121, 23);
+            this.comboCuentas.Size = new System.Drawing.Size(163, 23);
             this.comboCuentas.TabIndex = 3;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(189, 132);
+            this.numericUpDown1.Location = new System.Drawing.Point(202, 132);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 23);
             this.numericUpDown1.TabIndex = 4;
             // 
             // btn_NewMovement
             // 
-            this.btn_NewMovement.Location = new System.Drawing.Point(189, 175);
+            this.btn_NewMovement.Location = new System.Drawing.Point(202, 175);
             this.btn_NewMovement.Name = "btn_NewMovement";
-            this.btn_NewMovement.Size = new System.Drawing.Size(134, 23);
+            this.btn_NewMovement.Size = new System.Drawing.Size(120, 23);
             this.btn_NewMovement.TabIndex = 5;
             this.btn_NewMovement.Text = "Cargar Movimiento";
             this.btn_NewMovement.UseVisualStyleBackColor = true;
@@ -100,16 +99,6 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(418, 279);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // btn_NewAccount
-            // 
-            this.btn_NewAccount.Location = new System.Drawing.Point(18, 175);
-            this.btn_NewAccount.Name = "btn_NewAccount";
-            this.btn_NewAccount.Size = new System.Drawing.Size(133, 23);
-            this.btn_NewAccount.TabIndex = 7;
-            this.btn_NewAccount.Text = "Cargar nueva Cuenta";
-            this.btn_NewAccount.UseVisualStyleBackColor = true;
-            this.btn_NewAccount.Click += new System.EventHandler(this.btn_NewAccount_Click);
             // 
             // btn_newSeat
             // 
@@ -144,7 +133,6 @@
             this.ClientSize = new System.Drawing.Size(800, 401);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btn_newSeat);
-            this.Controls.Add(this.btn_NewAccount);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_NewMovement);
             this.Controls.Add(this.numericUpDown1);
