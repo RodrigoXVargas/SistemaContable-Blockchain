@@ -112,6 +112,7 @@
             this.btn_newSeat.TabIndex = 8;
             this.btn_newSeat.Text = "Cargar Asiento";
             this.btn_newSeat.UseVisualStyleBackColor = true;
+            this.btn_newSeat.Click += new System.EventHandler(this.btn_newSeat_Click);
             // 
             // btnVolver
             // 
@@ -137,6 +138,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(373, 23);
             this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // new_Seat
             // 

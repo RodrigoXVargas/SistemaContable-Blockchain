@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using capaNegocio;
 using MySql.Data.MySqlClient;
 using capaEntidad;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
+using System.Windows.Controls;
 
 namespace capaPresentacion
 {
@@ -51,6 +54,23 @@ namespace capaPresentacion
         }
 
         private void comboCuentas_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_newSeat_Click(object sender, EventArgs e)
+        {
+            ComboBox cmb = (ComboBox)sender;
+            int selectedIndex = cmb.SelectedIndex;
+            int selectedValue = (int)cmb.SelectedValue;
+
+            ComboboxItem selectedAccount = (ComboboxItem)cmb.SelectedItem;
+
+            Account account = new Account(cuentas.Items.);
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
