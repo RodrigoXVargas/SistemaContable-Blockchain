@@ -108,7 +108,11 @@ namespace capaPresentacion
                 Blockchain blockchain = new Blockchain();
                 blockchain._Blocks.Add(block);
 
+                Base.PersistBlockchain(blockchain);
                 MessageBox.Show("Carga exitosa");
+
+                MessageBox.Show(Convert.ToString(Base.ReadBlockchain()._Blocks.Count));
+                
 
             }
             catch
