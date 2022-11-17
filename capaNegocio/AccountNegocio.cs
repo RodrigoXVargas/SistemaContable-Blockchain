@@ -8,8 +8,10 @@ namespace capaNegocio
     public class AccountNegocio
     {
         AccountCrud accountCrud = new AccountCrud();
+        /*
         public bool ValidarDatos(Account account)
         {
+            
             bool resultado = true;
 
             if (account.Name == String.Empty)
@@ -19,10 +21,10 @@ namespace capaNegocio
             }
 
             return resultado;
+            
+    }
 
-        }
-
-        public void PruebaMySQL()
+    public void PruebaMySQL()
         {
             accountCrud.PruebaConexion();
         }
@@ -44,5 +46,6 @@ namespace capaNegocio
         {
             return accountCrud.Listar();
         }
+        */
     }
 }

@@ -32,16 +32,7 @@ namespace capaPresentacion
 
         private void new_Seat_Load(object sender, EventArgs e)
         {
-            comboCuentas.Items.Clear();
-            MySqlConnection conn = Base.Conectar();
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM accounts", conn);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            while (reader.Read())
-            {
-                comboCuentas.Items.Add(reader[1]);
-            }
-            conn.Close();
+            
 
         }
 

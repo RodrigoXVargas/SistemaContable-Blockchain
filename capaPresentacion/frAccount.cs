@@ -26,6 +26,7 @@ namespace capaPresentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            /*
             bool resultado;
             Account account = new Account();
 
@@ -50,10 +51,12 @@ namespace capaPresentacion
 
             CargarDatos();
             LimpiarForm();
+            */
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            /*
             if (txtID.Value == 0) return;
 
             if (MessageBox.Show("Deseas eliminar el registro?", "Titulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -64,6 +67,7 @@ namespace capaPresentacion
             }
             CargarDatos();
             LimpiarForm();
+            */
         }
 
         private void frClientes_Load(object sender, EventArgs e)
@@ -73,12 +77,14 @@ namespace capaPresentacion
 
         private void CargarDatos()
         {
+            /*
             gridDatos.DataSource = accountNegocio.ObtenerDatos().Tables["accounts"];
+            */
         }
 
         private void gridDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            /*
             try
             {
                 txtID.Value = (int)gridDatos.CurrentRow.Cells["id"].Value;
@@ -89,11 +95,12 @@ namespace capaPresentacion
                 txtID.Value = 0;
                 txtNombre.Text = "";
             }
-
+            */
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             new_Seat new_Seat = new new_Seat();
             new_Seat.Show();
