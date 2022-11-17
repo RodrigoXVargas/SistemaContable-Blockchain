@@ -17,11 +17,27 @@ namespace capaDatos
         {
             try
             {
-                file = new FileStream(@"C:\Users\rodri\Desktop\contabilidad\block.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                file = new FileStream("block.txt", FileMode.OpenOrCreate, FileAccess.Write);
                 formatter = new BinaryFormatter();
                 formatter.Serialize(file, block);
                 return true;
             }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+        }
+
+        public static bool PersistBlockchain(Account account)
+        {
+            try
+            {
+                file = new FileStream("block.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                formatter = new BinaryFormatter();
+                formatter.Serialize(file, account);
+                return true;
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 return false;

@@ -3,7 +3,7 @@ using capaEntidad;
 
 namespace capaDatos
 {
-    
+    [Serializable]
     public class Account
     {
         public string fecha { get; set; }
