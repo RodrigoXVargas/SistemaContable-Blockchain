@@ -18,19 +18,11 @@ namespace capaEntidad
 
             String myHashCalculated = String.Empty;
 
-            //calcular el hash
             using (SHA256 mySHA256 = SHA256.Create())
             {
-
-                //selecionar el encoding "utf8". Pasamos el texto a un array de bytes con el encoding de UTF8
                 byte[] encodedText = new UTF8Encoding().GetBytes(text);
-
-                //Calculamos el Hash. Tenemos en un array de bytes el texto codificado con SHA256
                 byte[] myHashArray = mySHA256.ComputeHash(encodedText);
-
-                //Convertimos en un string el hash codificado
-                myHashCalculated = BitConverter.ToString(myHashArray).Replace("-", String.Empty);          //Replace("-", string.Empty) ==> el byte array tiene guines en medio(segun el que explica en el video), esta funcion quita los guiones
-                //myHashCalculated = BitConverter.ToString(myHashArray);
+                myHashCalculated = BitConverter.ToString(myHashArray).Replace("-", String.Empty);
             }
             return myHashCalculated;
         }
