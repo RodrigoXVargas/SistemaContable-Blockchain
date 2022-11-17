@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using capaNegocio;
 using MySql.Data.MySqlClient;
+using capaEntidad;
 
 namespace capaPresentacion
 {
@@ -32,6 +33,16 @@ namespace capaPresentacion
 
         private void new_Seat_Load(object sender, EventArgs e)
         {
+            Blockchain blockchain = Base.ReadBlockchain();
+            /*Account caja = new Account("Caja", 0, 200, 0, "20/11/2022");
+            Account banco = new Account("Banco galicia", 0, 300, 0, "21/11/2022");
+            List<Account> list = new List<Account>();
+            list.Add(caja);
+            list.Add(banco);*/
+            foreach (Account account in blockchain._TempAccount)
+            {
+                comboCuentas.Items.Add(account._nombre);
+            }
             
 
         }

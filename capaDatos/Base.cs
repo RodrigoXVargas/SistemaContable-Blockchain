@@ -17,7 +17,7 @@ namespace capaDatos
         {
             try
             {
-                file = new FileStream("block.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                file = new FileStream(@"C:\Users\rodri\Desktop\contabilidad\block.txt", FileMode.OpenOrCreate, FileAccess.Write);
                 formatter = new BinaryFormatter();
                 formatter.Serialize(file, block);
                 return true;
@@ -32,7 +32,7 @@ namespace capaDatos
         {
             try
             {
-                file = new FileStream("block.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                file = new FileStream(@"C:\Users\rodri\Desktop\contabilidad\block.txt", FileMode.OpenOrCreate, FileAccess.Write);
                 formatter = new BinaryFormatter();
                 formatter.Serialize(file, account);
                 return true;
@@ -60,6 +60,26 @@ namespace capaDatos
                 Blockchain newBc = new Blockchain();
                 return newBc;
             }
+        }
+
+        public void Carga_de_datos()
+        {
+            Blockchain blockchain = new Blockchain();
+            Account caja = new Account("Caja", 0, 200, 0, "20/11/2022");
+            Account banco = new Account("Banco galicia", 0, 300, 0, "21/11/2022");
+            List<Account> listaCuentas = new List<Account>();
+            listaCuentas.Add(caja);
+            blockchain._TempAccount.Add(caja);
+            blockchain._TempAccount.Add(banco);
+            if (Base.PersistBlockchain(blockchain))
+            {
+                MessageBox.Show("datos guardados");
+            }
+            else
+            {
+                MessageBox.Show("datos no guardados");
+            }
+            
         }
     }
 }

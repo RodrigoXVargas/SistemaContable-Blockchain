@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace capaPresentacion
 {
     public partial class Main : Form
     {
+        Base Base = new Base();
         public Main()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace capaPresentacion
 
         private void btnCarga_Click(object sender, EventArgs e)
         {
+            Base.Carga_de_datos();
             this.Hide();
             new_Seat new_Seat = new new_Seat();
             new_Seat.Show();

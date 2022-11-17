@@ -12,16 +12,16 @@ namespace capaDatos
 
         private long id;
         private DateTime date;
-        private List<Movement> fk_movement;
+        private List<Account> account;
 
         public long Id { get => id; set => id = value; }
         public DateTime Date { get => date; set => date = value; }
-        internal List<Movement> Fk_movement { get => fk_movement; set => fk_movement = value; }
-        internal Seats(int id, DateTime date, List<Movement> fk_movement)
+        //public List<Account> account { get => account; set => account = value; }
+        internal Seats(int id, DateTime date, List<Account> account)
         {
             this.id = id;
             this.date = date;
-            this.fk_movement = fk_movement;
+            this.account = account;
         }
 
         public Seats()

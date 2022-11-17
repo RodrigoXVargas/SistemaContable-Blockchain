@@ -9,19 +9,20 @@ namespace capaDatos
     [Serializable]
     public class Blockchain
     {
+        //atributos
+        private List<Block> blocks;
+        private List<Account> tempAccount;
+        private const int difficulty = 4;
 
-        public List<Block> Blocks { get; set; }
-
-        public List<Account> TempAccount { get; set; }
-
-        public const int Difficulty = 4;
-
+        //getters and setters
+        public List<Block> _Blocks { get => blocks; set => blocks = value; }
+        public List<Account> _TempAccount { get => tempAccount; set => tempAccount = value; }
+        public int _Difficulty => difficulty;
 
         public Blockchain()
         {
-
-            Blocks = new List<Block>();
-            TempAccount = new List<Account>();
+            blocks = new List<Block>();
+            tempAccount = new List<Account>();
         }
 
     }
