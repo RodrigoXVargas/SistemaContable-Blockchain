@@ -33,6 +33,8 @@ namespace capaPresentacion
 
             foreach (string item in persistence.carga_combo())
                 cuentas.Items.Add(item);
+
+            debeHaber.Items.Add("Debe");
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
