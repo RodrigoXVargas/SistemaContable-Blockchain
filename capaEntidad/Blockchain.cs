@@ -12,11 +12,13 @@ namespace capaDatos
         //atributos
         private List<Block> blocks = new List<Block>();
         private List<Seat> tempAccount = new List<Seat>();
-        private const int difficulty = 4;
+        
 
         //getters and setters
         public List<Block> _Blocks { get => blocks; set => blocks = value; }
         public List<Seat> _TempAccount { get => tempAccount; set => tempAccount = value; }
+
+        
 
         public Blockchain()
         {
@@ -24,8 +26,6 @@ namespace capaDatos
 
         public Blockchain(List<Block> blocks, List<Seat> tempAccount)
         {
-            _Blocks = blocks;
-            _TempAccount = tempAccount;
             _Blocks = blocks;
             _TempAccount = tempAccount;
         }
