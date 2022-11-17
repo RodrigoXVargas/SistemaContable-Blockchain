@@ -10,25 +10,39 @@ namespace capaDatos
     public class Block
     {
 
-        public long Id { get; set; }
-        public string Descripcion;
-        public string Fecha;
-        public DateTime Timestamp { get; set; }
-        public Account[] Account { get; set; }
-        public string Hash { get; set; }
-        public string PreviousHash { get; set; }
-        public int proof { get; set; }
+        private long id;
+        private String descripcion;
+        private String fecha;
+        private DateTime timestamp;
+        private Seats[] seats;
+        private String hash;
+        private String previousHash;
+        private int proof;
 
+        public long Id { get => id; set => id = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
+        public DateTime Timestamp { get => timestamp; set => timestamp = value; }
+        public Seats[] Seats { get => seats; set => seats = value; }
+        public string Hash { get => hash; set => hash = value; }
+        public string PreviousHash { get => previousHash; set => previousHash = value; }
+        public int Proof { get => proof; set => proof = value; }
 
-        public Block(int index, List<Account> cuentas, string previousHash, String descripcion, String fecha)
+        public Block()
         {
-            Fecha = fecha;
-            Descripcion = descripcion;
-            Id = index;
-            Account = cuentas != null ? cuentas.ToArray() : new Account[0];
-            Timestamp = DateTime.Now;
-            PreviousHash = previousHash;
-
         }
+
+        public Block(long id, string descripcion, string fecha, DateTime timestamp, Seats[] seats, string hash, string previousHash, int proof)
+        {
+            Id = id;
+            Descripcion = descripcion;
+            Fecha = fecha;
+            Timestamp = timestamp;
+            Seats = seats;
+            Hash = hash;
+            PreviousHash = previousHash;
+            Proof = proof;
+        }
+
     }
 }

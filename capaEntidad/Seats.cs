@@ -12,11 +12,11 @@ namespace capaDatos
 
         private long id;
         private DateTime date;
-        private List<Account> account;
+        private List<Account> account = new List<Account>();
 
         public long Id { get => id; set => id = value; }
         public DateTime Date { get => date; set => date = value; }
-        //public List<Account> account { get => account; set => account = value; }
+        public List<Account> Account { get => account; set => account = value; }
         internal Seats(int id, DateTime date, List<Account> account)
         {
             this.id = id;

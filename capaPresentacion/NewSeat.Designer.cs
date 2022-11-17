@@ -103,7 +103,7 @@
             // 
             // btn_NewAccount
             // 
-            this.btn_NewAccount.Location = new System.Drawing.Point(12, 175);
+            this.btn_NewAccount.Location = new System.Drawing.Point(18, 175);
             this.btn_NewAccount.Name = "btn_NewAccount";
             this.btn_NewAccount.Size = new System.Drawing.Size(133, 23);
             this.btn_NewAccount.TabIndex = 7;
@@ -129,6 +129,13 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
             // 
             // new_Seat
             // 

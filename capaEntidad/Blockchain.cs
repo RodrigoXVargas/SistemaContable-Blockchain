@@ -10,8 +10,8 @@ namespace capaDatos
     public class Blockchain
     {
         //atributos
-        private List<Block> blocks;
-        private List<Account> tempAccount;
+        private List<Block> blocks = new List<Block>();
+        private List<Account> tempAccount = new List<Account>();
         private const int difficulty = 4;
 
         //getters and setters
@@ -21,9 +21,14 @@ namespace capaDatos
 
         public Blockchain()
         {
-            blocks = new List<Block>();
-            tempAccount = new List<Account>();
         }
 
+        public Blockchain(List<Block> blocks, List<Account> tempAccount)
+        {
+            _Blocks = blocks;
+            _TempAccount = tempAccount;
+            _Blocks = blocks;
+            _TempAccount = tempAccount;
+        }
     }
 }
