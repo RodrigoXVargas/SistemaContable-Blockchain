@@ -15,9 +15,11 @@ namespace capaPresentacion
     public partial class Main : Form
     {
         Base Base = new Base();
+        Blockchain block = new Blockchain();
         public Main()
         {
             InitializeComponent();
+            block = Base.ReadBlockchain();
         }
 
         private void btnCarga_Click(object sender, EventArgs e)
@@ -45,6 +47,18 @@ namespace capaPresentacion
         private void Main_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void bSalir_Click(object sender, EventArgs e)
+        {
+            if (Base.PersistBlockchain(block))
+            {
+                MessageBox.Show("Hasta Luego");
+            }
+            else
+            {
+                MessageBox.Show("No Persistido. Bye");
+            }
         }
     }
 }

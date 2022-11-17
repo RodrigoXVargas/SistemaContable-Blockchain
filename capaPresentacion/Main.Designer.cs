@@ -31,11 +31,12 @@
             this.btnCarga = new System.Windows.Forms.Button();
             this.btnLibroDiario = new System.Windows.Forms.Button();
             this.btnLibroMayor = new System.Windows.Forms.Button();
+            this.bSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCarga
             // 
-            this.btnCarga.Location = new System.Drawing.Point(43, 45);
+            this.btnCarga.Location = new System.Drawing.Point(43, 31);
             this.btnCarga.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCarga.Name = "btnCarga";
             this.btnCarga.Size = new System.Drawing.Size(330, 37);
@@ -46,7 +47,7 @@
             // 
             // btnLibroDiario
             // 
-            this.btnLibroDiario.Location = new System.Drawing.Point(43, 115);
+            this.btnLibroDiario.Location = new System.Drawing.Point(43, 90);
             this.btnLibroDiario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLibroDiario.Name = "btnLibroDiario";
             this.btnLibroDiario.Size = new System.Drawing.Size(330, 36);
@@ -57,7 +58,7 @@
             // 
             // btnLibroMayor
             // 
-            this.btnLibroMayor.Location = new System.Drawing.Point(43, 179);
+            this.btnLibroMayor.Location = new System.Drawing.Point(43, 152);
             this.btnLibroMayor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLibroMayor.Name = "btnLibroMayor";
             this.btnLibroMayor.Size = new System.Drawing.Size(330, 33);
@@ -66,11 +67,22 @@
             this.btnLibroMayor.UseVisualStyleBackColor = true;
             this.btnLibroMayor.Click += new System.EventHandler(this.btnLibroMayor_Click);
             // 
+            // bSalir
+            // 
+            this.bSalir.Location = new System.Drawing.Point(43, 208);
+            this.bSalir.Name = "bSalir";
+            this.bSalir.Size = new System.Drawing.Size(330, 34);
+            this.bSalir.TabIndex = 3;
+            this.bSalir.Text = "Salir";
+            this.bSalir.UseVisualStyleBackColor = true;
+            this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 272);
+            this.Controls.Add(this.bSalir);
             this.Controls.Add(this.btnLibroMayor);
             this.Controls.Add(this.btnLibroDiario);
             this.Controls.Add(this.btnCarga);
@@ -89,5 +101,6 @@
         private Button btnCarga;
         private Button btnLibroDiario;
         private Button btnLibroMayor;
+        private Button bSalir;
     }
 }
