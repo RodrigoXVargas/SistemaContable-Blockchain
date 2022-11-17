@@ -79,6 +79,7 @@
             this.MinimumSize = new System.Drawing.Size(423, 319);
             this.Name = "Main";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
 
         }

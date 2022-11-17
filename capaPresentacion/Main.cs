@@ -1,4 +1,5 @@
-﻿using System;
+﻿using capaDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,20 @@ namespace capaPresentacion
             this.Hide();
             Ledger ledger = new Ledger();
             ledger.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Blockchain b = new Blockchain();
+
+            if (Base.PersistBlockchain(b))
+            {
+                MessageBox.Show("SI");
+            }
+            else
+            {
+                MessageBox.Show("NO");
+            }
         }
     }
 }

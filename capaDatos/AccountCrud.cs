@@ -9,7 +9,7 @@ namespace capaDatos
 {
     public class AccountCrud
     {
-        Base Base = new Base();
+        /*Base Base = new Base();
 
         public void PruebaConexion()
         {
@@ -76,7 +76,7 @@ namespace capaDatos
             
             return dataSet;
 
-        }
+        }*/
 
         
 

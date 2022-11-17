@@ -1,4 +1,5 @@
 ﻿using capaDatos;
+using capaEntidad;
 
 namespace capaDatos
 {
