@@ -98,8 +98,8 @@ namespace capaPresentacion
                 Seat seat = new Seat(date_Seat.Value.Date, textBox1.Text, accountList);
                 if (Miner.Validator(seat))
                 {
-
-                    Block block = new Block(seat, Base.ReadBlockchain());
+                    Blockchain blockchain = Base.ReadBlockchain();
+                    Block block = new Block(seat, blockchain);
 
                     blockchain._Blocks.Add(block);
 
