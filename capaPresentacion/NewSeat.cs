@@ -97,9 +97,11 @@ namespace capaPresentacion
 
                 Seat seat = new Seat(date_Seat.Value.Date, textBox1.Text, accountList);
 
-                Block block = new Block(seat);
-
                 Blockchain blockchain = new Blockchain();
+
+                Block block = new Block(seat, blockchain);
+
+                
                 blockchain._Blocks.Add(block);
 
                 Base.PersistBlockchain(blockchain);
