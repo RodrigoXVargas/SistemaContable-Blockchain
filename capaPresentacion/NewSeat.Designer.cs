@@ -150,6 +150,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.date_Seat);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(550, 446);
+            this.MinimumSize = new System.Drawing.Size(550, 446);
             this.Name = "new_Seat";
             this.Text = "Carga de Asiento";
             this.Load += new System.EventHandler(this.new_Seat_Load);
