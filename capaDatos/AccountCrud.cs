@@ -11,6 +11,8 @@ namespace capaDatos
     {
         /*Base Base = new Base();
 
+
+        /*
         public void PruebaConexion()
         {
             MySqlConnection conexion = Base.Conectar();
@@ -78,7 +80,7 @@ namespace capaDatos
 
         }*/
 
-        
+        */
 
     }
 }
