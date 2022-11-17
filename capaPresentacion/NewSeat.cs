@@ -29,37 +29,10 @@ namespace capaPresentacion
 
         private void new_Seat_Load(object sender, EventArgs e)
         {
-            List<string> listaCuentas = new List<string>
-        {
-            "CAJA",
-            "BANCO XXX C/C",
-            "BANCO XXX C/A",
-            "VALORES A DEPOSITAR",
-            "VALORES DIFERIDOS A DEPOSITAR",
-            "CHEQUES RECHAZADOS",
-            "MONEDA EXTRANJERA",
-            "TARJETA DE CREDITO XXX",
-            "MERCADERIAS",
-            "MATERIAS PRIMAS",
-            "MUEBLES Y ÚTILES",
-            "INSTALACIONES",
-            "INMUEBLES",
-            "RODADOS",
-            "MAQUINARIAS",
-            "EQUIPOS DE COMPUTACIÓN",
-            "DEUDORES POR VENTAS",
-            "DEUDORES VARIOS",
-            "DEUDORES MOROSOS",
-            "DEUDORES EN GESTIÓN JUDICIAL",
-            "PREVISION DEUDORES INCOBRALES",
-            "PREVISION POR DESVALORIZACIÓN DE BIENES DE CAMBIO",
-            "DOCUMENTOS A COBRAR",
-            "IVA A FAVOR"
-        };
+            Base persistence = new Base();
 
-            foreach (string item in listaCuentas)
+            foreach (string item in persistence.carga_combo())
                 comboCuentas.Items.Add(item);
-
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -71,36 +44,12 @@ namespace capaPresentacion
 
         private void comboCuentas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<string> listaCuentas = new List<string>
-        {
-            "CAJA",
-            "BANCO XXX C/C",
-            "BANCO XXX C/A",
-            "VALORES A DEPOSITAR",
-            "VALORES DIFERIDOS A DEPOSITAR",
-            "CHEQUES RECHAZADOS",
-            "MONEDA EXTRANJERA",
-            "TARJETA DE CREDITO XXX",
-            "MERCADERIAS",
-            "MATERIAS PRIMAS",
-            "MUEBLES Y ÚTILES",
-            "INSTALACIONES",
-            "INMUEBLES",
-            "RODADOS",
-            "MAQUINARIAS",
-            "EQUIPOS DE COMPUTACIÓN",
-            "DEUDORES POR VENTAS",
-            "DEUDORES VARIOS",
-            "DEUDORES MOROSOS",
-            "DEUDORES EN GESTIÓN JUDICIAL",
-            "PREVISION DEUDORES INCOBRALES",
-            "PREVISION POR DESVALORIZACIÓN DE BIENES DE CAMBIO",
-            "DOCUMENTOS A COBRAR",
-            "IVA A FAVOR"
-        };
+            
+        }
 
-            foreach(string item in listaCuentas)
-                comboCuentas.Items.Add(item);
+        private void comboCuentas_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

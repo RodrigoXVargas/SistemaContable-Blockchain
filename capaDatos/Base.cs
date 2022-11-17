@@ -67,6 +67,37 @@ namespace capaDatos
             }
         }
 
+        public List<string> carga_combo()
+        {
+            return new List<string>
+        {
+            "CAJA",
+            "BANCO XXX C/C",
+            "BANCO XXX C/A",
+            "VALORES A DEPOSITAR",
+            "VALORES DIFERIDOS A DEPOSITAR",
+            "CHEQUES RECHAZADOS",
+            "MONEDA EXTRANJERA",
+            "TARJETA DE CREDITO XXX",
+            "MERCADERIAS",
+            "MATERIAS PRIMAS",
+            "MUEBLES Y ÚTILES",
+            "INSTALACIONES",
+            "INMUEBLES",
+            "RODADOS",
+            "MAQUINARIAS",
+            "EQUIPOS DE COMPUTACIÓN",
+            "DEUDORES POR VENTAS",
+            "DEUDORES VARIOS",
+            "DEUDORES MOROSOS",
+            "DEUDORES EN GESTIÓN JUDICIAL",
+            "PREVISION DEUDORES INCOBRALES",
+            "PREVISION POR DESVALORIZACIÓN DE BIENES DE CAMBIO",
+            "DOCUMENTOS A COBRAR",
+            "IVA A FAVOR"
+        };
+        }
+
         public void Carga_de_datos()
         {
             //Blockchain blockchain = new Blockchain();

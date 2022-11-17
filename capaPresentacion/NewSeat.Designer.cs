@@ -74,6 +74,7 @@
             this.comboCuentas.Name = "comboCuentas";
             this.comboCuentas.Size = new System.Drawing.Size(163, 23);
             this.comboCuentas.TabIndex = 3;
+            this.comboCuentas.SelectedIndexChanged += new System.EventHandler(this.comboCuentas_SelectedIndexChanged_1);
             // 
             // numericUpDown1
             // 
