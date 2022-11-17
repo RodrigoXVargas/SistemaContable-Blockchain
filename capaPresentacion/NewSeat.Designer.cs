@@ -75,10 +75,12 @@
             this.debeHaber,
             this.monto});
             this.dataGridView1.Location = new System.Drawing.Point(18, 117);
+            this.dataGridView1.MaximumSize = new System.Drawing.Size(504, 235);
+            this.dataGridView1.MinimumSize = new System.Drawing.Size(504, 235);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(504, 48);
+            this.dataGridView1.Size = new System.Drawing.Size(504, 235);
             this.dataGridView1.TabIndex = 6;
             // 
             // cuentas
@@ -104,7 +106,7 @@
             // 
             // btn_newSeat
             // 
-            this.btn_newSeat.Location = new System.Drawing.Point(413, 213);
+            this.btn_newSeat.Location = new System.Drawing.Point(413, 372);
             this.btn_newSeat.Name = "btn_newSeat";
             this.btn_newSeat.Size = new System.Drawing.Size(109, 23);
             this.btn_newSeat.TabIndex = 8;
@@ -113,7 +115,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(18, 213);
+            this.btnVolver.Location = new System.Drawing.Point(12, 372);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 9;
@@ -140,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 246);
+            this.ClientSize = new System.Drawing.Size(534, 407);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btn_newSeat);
@@ -148,8 +150,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.date_Seat);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(550, 285);
-            this.MinimumSize = new System.Drawing.Size(550, 285);
             this.Name = "new_Seat";
             this.Text = "Carga de Asiento";
             this.Load += new System.EventHandler(this.new_Seat_Load);
