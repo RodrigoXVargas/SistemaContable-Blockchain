@@ -32,7 +32,7 @@ namespace capaDatos
             this.hash = Miner.MineBlock(seat);
             if (blockchain._Blocks.Count == 0)
             {
-                this.previousHash = "cero";
+                this.previousHash = Miner.CalculateHash("cero");
             }
             else
             {

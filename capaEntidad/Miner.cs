@@ -69,5 +69,10 @@ namespace capaEntidad
             return hash;
         }
 
+
+        public static bool Validator(Seat seat)
+        {
+            return true;
+        }
     }
 }
