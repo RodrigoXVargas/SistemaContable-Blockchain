@@ -40,9 +40,16 @@ namespace capaPresentacion
                 {
                     if (bc._Blocks[i]._Seat._Date >= from && bc._Blocks[i]._Seat._Date <= to) seats.Add(bc._Blocks[i]._Seat);
                 }
+
+                dgSeat.DataSource = seats;
             }
 
+        }
 
+        private void dgSeat_SelectionChanged(object sender, EventArgs e)
+        {
+            Seat s = (Seat)dgSeat.CurrentRow.DataBoundItem;
+            dgMoves.DataSource = s._Account;
         }
     }
 }
