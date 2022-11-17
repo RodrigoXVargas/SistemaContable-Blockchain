@@ -13,6 +13,9 @@ namespace capaEntidad
     /// </summary>
     public class Miner
     {
+
+
+
         public static String CalculateHash(String text)
         {
 

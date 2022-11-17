@@ -11,13 +11,12 @@ namespace capaDatos
     public class Block
     {
 
-        private long id;
         private Seat seat;
         private String hash;
         private String previousHash;
         private const int dificultad = 4;
 
-        public long _Id { get => id; set => id = value; }
+
         public Seat _Seat { get => seat; set => seat = value; }
         public string _Hash { get => hash; set => hash = value; }
         public string _PreviousHash { get => previousHash; set => previousHash = value; }
@@ -27,9 +26,9 @@ namespace capaDatos
         {
         }
 
-        public Block(long id, Seat seat, string hash, string previousHash, Blockchain blockchain)
+        public Block(Seat seat, string hash, string previousHash, Blockchain blockchain)
         {
-            this.id = id;
+
             this.seat = seat;
             this.hash = Miner.MineBlock(seat, dificultad);
             if (blockchain._Blocks.Count == 0)
