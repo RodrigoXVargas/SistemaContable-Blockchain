@@ -56,9 +56,9 @@ namespace capaPresentacion
 
         }
 
-       
 
-        
+
+
 
         private void btn_newSeat_Click(object sender, EventArgs e)
         {
@@ -68,10 +68,13 @@ namespace capaPresentacion
 
             Account account = new Account();
 
-            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            try
             {
-                try
+                if (string.IsNullOrEmpty(textBox1.Text)) { throw new InvalidOperationException(""); }
+                for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
+
+
                     account._Nombre = (string)dataGridView1.Rows[i].Cells[0].FormattedValue;
 
                     if (dataGridView1.Rows[i].Cells[1].FormattedValue.Equals("Debe"))
@@ -88,28 +91,30 @@ namespace capaPresentacion
                     {
                         throw new InvalidOperationException("");
                     }
+
+                    accountList.Add(account);
                 }
-                catch
-                {
-                    MessageBox.Show("Hay una celda vacia");
-                }
-                accountList.Add(account);
+
+                Seat seat = new Seat();
+                seat._Id = 1;
+                seat._Date = date_Seat.Value.Date;
+                seat._Name = textBox1.Text;
+                seat._Account = accountList;
+
+                Block block = new Block();
+                block._Seat = seat;
+                block._Id = 1;
+
+                Blockchain blockchain = new Blockchain();
+                blockchain._Blocks.Add(block);
+
+                MessageBox.Show("Carga exitosa");
+
             }
-
-            Seat seat = new Seat();
-            seat._Id = 1;
-            seat._Date = date_Seat.Value.Date;
-            seat._Name = textBox1.Text;
-            seat._Account = accountList;
-
-            Block block = new Block();
-            block._Seat = seat;
-            block._Id = 1;
-
-            Blockchain blockchain = new Blockchain();
-            blockchain._Blocks.Add(block);
-
-            MessageBox.Show("Carga exitosa");
+            catch
+            {
+                MessageBox.Show("Hay una celda vacia");
+            }
 
         }
 
