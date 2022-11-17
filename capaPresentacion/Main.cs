@@ -24,7 +24,7 @@ namespace capaPresentacion
 
         private void btnCarga_Click(object sender, EventArgs e)
         {
-            Base.Carga_de_datos();
+            
             this.Hide();
             new_Seat new_Seat = new new_Seat();
             new_Seat.Show();

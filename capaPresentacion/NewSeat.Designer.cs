@@ -57,6 +57,7 @@
             this.date_Seat.Name = "date_Seat";
             this.date_Seat.Size = new System.Drawing.Size(388, 23);
             this.date_Seat.TabIndex = 1;
+            this.date_Seat.ValueChanged += new System.EventHandler(this.date_Seat_ValueChanged);
             // 
             // label2
             // 
@@ -82,6 +83,8 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(504, 235);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView1_EditingControlShowing_1);
             // 
             // cuentas
             // 

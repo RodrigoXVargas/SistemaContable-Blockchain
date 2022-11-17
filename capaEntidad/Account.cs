@@ -16,11 +16,11 @@ namespace capaDatos
         public float _Debe { get => debe; set => debe = value; }
         public float _Haber { get => haber; set => haber = value; }
 
-        public Account(string nombre)
+        public Account()
         {
-            this._Nombre = nombre;
+            
         }
-        public Account(string nombre, int tipo, float monto, int debeOHaber, string fecha)
+        public Account(string nombre, float monto, int debeOHaber, string fecha)
         {
             this.nombre = nombre;
 

@@ -16,7 +16,6 @@ namespace capaDatos
 
         //getters and setters
         public List<Block> _Blocks { get => blocks; set => blocks = value; }
-        public int _Difficulty => difficulty;
         public List<Seat> _TempAccount { get => tempAccount; set => tempAccount = value; }
 
         public Blockchain()

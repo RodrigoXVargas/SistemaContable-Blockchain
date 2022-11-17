@@ -8,19 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using capaNegocio;
 using MySql.Data.MySqlClient;
 using capaEntidad;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using ComboBox = System.Windows.Forms.ComboBox;
-using System.Windows.Controls;
+using System.ComponentModel.DataAnnotations;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace capaPresentacion
 {
     public partial class new_Seat : Form
     {
-        AccountNegocio accountNegocio = new AccountNegocio();
-        AccountCrud accountCrud = new AccountCrud();
         Base Base = new Base();
         public new_Seat()
         {
@@ -50,7 +48,7 @@ namespace capaPresentacion
 
         private void comboCuentas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void comboCuentas_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -58,21 +56,96 @@ namespace capaPresentacion
 
         }
 
+       
+
+        
+
         private void btn_newSeat_Click(object sender, EventArgs e)
         {
-            ComboBox cmb = (ComboBox)sender;
-            int selectedIndex = cmb.SelectedIndex;
-            int selectedValue = (int)cmb.SelectedValue;
 
-            ComboboxItem selectedAccount = (ComboboxItem)cmb.SelectedItem;
 
-            Account account = new Account(cuentas.Items.);
+            List<Account> accountList = new List<Account>();
+
+            Account account = new Account();
+
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                try
+                {
+                    account._Nombre = (string)dataGridView1.Rows[i].Cells[0].FormattedValue;
+
+                    if (dataGridView1.Rows[i].Cells[1].FormattedValue.Equals("Debe"))
+                    {
+                        account._Debe = Convert.ToSingle(dataGridView1.Rows[i].Cells[2].FormattedValue);
+                        account._Haber = 0;
+                    }
+                    else if (dataGridView1.Rows[i].Cells[1].FormattedValue.Equals("Haber"))
+                    {
+                        account._Haber = Convert.ToSingle(dataGridView1.Rows[i].Cells[2].FormattedValue);
+                        account._Debe = 0;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Hay una celda vacia");
+                }
+                accountList.Add(account);
+            }
+
+            Seat seat = new Seat();
+            seat._Id = 1;
+            seat._Date = date_Seat.Value.Date;
+            seat._Name = textBox1.Text;
+            seat._Account = accountList;
+
+            Block block = new Block();
+            block._Seat = seat;
+            block._Id = 1;
+
+            Blockchain blockchain = new Blockchain();
+            blockchain._Blocks.Add(block);
+
+            MessageBox.Show("Carga exitosa");
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void date_Seat_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_EditingControlShowing_1(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
+            if (dataGridView1.CurrentCell.ColumnIndex == 2) //Desired Column
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Column1_KeyPress);
+                }
+            }
+        }
+        private void Column1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
