@@ -46,17 +46,17 @@ namespace capaEntidad
         public static String MineBlock(Seat seat)
         {
             String hash = "";
-
-            String initialText = String.Format("{0}{1}", seat._Date, seat._HashSeat);
             int proof = 0;
-            String text = String.Format("{0}{1}", initialText, proof);
+            String text = String.Format("{0}{1}{2}", seat._Date, seat._HashSeat, proof);
+            
             String zeros = String.Empty.PadLeft(dificultad, '0');
 
             do
             {
-                proof++;
-                text = String.Format("{0}{1}", initialText, proof);
+
+                text = String.Format("{0}{1}{2}", seat._Date, seat._HashSeat, proof);
                 hash = Miner.CalculateHash(text);
+                proof++;
             } while (!hash.StartsWith(zeros));
 
             return hash;
