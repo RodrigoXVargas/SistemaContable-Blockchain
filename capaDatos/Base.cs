@@ -11,24 +11,9 @@ namespace capaDatos
 {
     public class Base
     {
-        private FileStream file;
-        private BinaryFormatter formatter;
-
-        public string CadenaConexion = "Server=localhost;User=root;Password=;Port=3306;database=contabilidad_db";
-
-        public MySqlConnection Conectar()
-        {
-            MySqlConnection mySqlConnection = new MySqlConnection(CadenaConexion);
-            mySqlConnection.Open();
-            return mySqlConnection;
-        }
-
-        public void Desconectar(MySqlConnection mySqlConnection)
-        {
-            mySqlConnection.Close();
-        }
-
-        public bool PersistBlockchain(Blockchain block)
+        private static FileStream file;
+        private static BinaryFormatter formatter;
+        public static bool PersistBlockchain(Blockchain block)
         {
             try
             {
@@ -43,7 +28,7 @@ namespace capaDatos
             }
         }
 
-        public Blockchain ReadBlockchain()
+        public static Blockchain ReadBlockchain()
         {
             Blockchain chain = null;
 
