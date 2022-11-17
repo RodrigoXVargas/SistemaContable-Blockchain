@@ -25,7 +25,7 @@ namespace capaDatos
         {
         }
 
-        public Block(Seat seat, string hash, string previousHash, Blockchain blockchain)
+        public Block(Seat seat, Blockchain blockchain)
         {
 
             this.seat = seat;
