@@ -23,5 +23,15 @@ namespace capaPresentacion
             Main main = new Main();
             main.Show();
         }
+
+        private void bStart_Click(object sender, EventArgs e)
+        {
+            DateTime from = dateFrom.Value.Date;
+            DateTime to = dateTo.Value.Date;
+
+            if (from > to) MessageBox.Show("Introduzca bien las fechas");
+
+
+        }
     }
 }

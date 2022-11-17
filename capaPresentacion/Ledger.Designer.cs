@@ -34,6 +34,7 @@
             this.labelTo = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.bStart = new System.Windows.Forms.Button();
+            this.comboCuentas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // bBack
@@ -84,18 +85,30 @@
             // bStart
             // 
             this.bStart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bStart.Location = new System.Drawing.Point(660, 25);
+            this.bStart.Location = new System.Drawing.Point(30, 202);
             this.bStart.Name = "bStart";
             this.bStart.Size = new System.Drawing.Size(94, 29);
             this.bStart.TabIndex = 12;
             this.bStart.Text = "Start";
             this.bStart.UseVisualStyleBackColor = true;
+            this.bStart.Click += new System.EventHandler(this.bStart_Click);
+            // 
+            // comboCuentas
+            // 
+            this.comboCuentas.FormattingEnabled = true;
+            this.comboCuentas.Items.AddRange(new object[] {
+            "TODO"});
+            this.comboCuentas.Location = new System.Drawing.Point(620, 24);
+            this.comboCuentas.Name = "comboCuentas";
+            this.comboCuentas.Size = new System.Drawing.Size(151, 28);
+            this.comboCuentas.TabIndex = 18;
             // 
             // Ledger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboCuentas);
             this.Controls.Add(this.bBack);
             this.Controls.Add(this.dateFrom);
             this.Controls.Add(this.dateTo);
@@ -117,5 +130,6 @@
         private Label labelTo;
         private Label labelFrom;
         private Button bStart;
+        private ComboBox comboCuentas;
     }
 }
