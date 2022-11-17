@@ -17,7 +17,7 @@ namespace capaDatos
         {
             try
             {
-                file = new FileStream(@"C:\Users\rodri\Desktop\contabilidad\block.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                file = new FileStream("block.txt", FileMode.OpenOrCreate, FileAccess.Write);
                 formatter = new BinaryFormatter();
                 formatter.Serialize(file, block);
                 return true;
@@ -28,11 +28,11 @@ namespace capaDatos
             }
         }
 
-        public static bool PersistBlockchain(Account account)
+        public static bool PersistAccount(Account account)
         {
             try
             {
-                file = new FileStream(@"C:\Users\rodri\Desktop\contabilidad\block.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                file = new FileStream("account.txt", FileMode.OpenOrCreate, FileAccess.Write);
                 formatter = new BinaryFormatter();
                 formatter.Serialize(file, account);
                 return true;
@@ -50,7 +50,7 @@ namespace capaDatos
 
             try
             {
-                file = new FileStream(@"C:\Users\rodri\Desktop\contabilidad\block.txt", FileMode.Open, FileAccess.Read);
+                file = new FileStream("block.txt", FileMode.Open, FileAccess.Read);
                 formatter = new BinaryFormatter();
                 chain = (Blockchain)formatter.Deserialize(file);
                 file.Close();
