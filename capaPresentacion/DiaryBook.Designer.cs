@@ -50,9 +50,10 @@
             // bBack
             // 
             this.bBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bBack.Location = new System.Drawing.Point(30, 400);
+            this.bBack.Location = new System.Drawing.Point(26, 300);
+            this.bBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(94, 29);
+            this.bBack.Size = new System.Drawing.Size(82, 22);
             this.bBack.TabIndex = 11;
             this.bBack.Text = "Back";
             this.bBack.UseVisualStyleBackColor = true;
@@ -60,25 +61,27 @@
             // 
             // dateFrom
             // 
-            this.dateFrom.Location = new System.Drawing.Point(81, 25);
+            this.dateFrom.Location = new System.Drawing.Point(71, 19);
+            this.dateFrom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Size = new System.Drawing.Size(215, 27);
+            this.dateFrom.Size = new System.Drawing.Size(189, 23);
             this.dateFrom.TabIndex = 10;
             // 
             // dateTo
             // 
-            this.dateTo.Location = new System.Drawing.Point(369, 25);
+            this.dateTo.Location = new System.Drawing.Point(323, 19);
+            this.dateTo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTo.Name = "dateTo";
-            this.dateTo.Size = new System.Drawing.Size(209, 27);
+            this.dateTo.Size = new System.Drawing.Size(183, 23);
             this.dateTo.TabIndex = 9;
             // 
             // labelTo
             // 
             this.labelTo.AutoSize = true;
             this.labelTo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.labelTo.Location = new System.Drawing.Point(327, 28);
+            this.labelTo.Location = new System.Drawing.Point(286, 21);
             this.labelTo.Name = "labelTo";
-            this.labelTo.Size = new System.Drawing.Size(36, 22);
+            this.labelTo.Size = new System.Drawing.Size(30, 19);
             this.labelTo.TabIndex = 8;
             this.labelTo.Text = "To:";
             // 
@@ -86,18 +89,19 @@
             // 
             this.labelFrom.AutoSize = true;
             this.labelFrom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.labelFrom.Location = new System.Drawing.Point(15, 28);
+            this.labelFrom.Location = new System.Drawing.Point(13, 21);
             this.labelFrom.Name = "labelFrom";
-            this.labelFrom.Size = new System.Drawing.Size(60, 22);
+            this.labelFrom.Size = new System.Drawing.Size(49, 19);
             this.labelFrom.TabIndex = 7;
             this.labelFrom.Text = "From:";
             // 
             // bStart
             // 
             this.bStart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bStart.Location = new System.Drawing.Point(660, 25);
+            this.bStart.Location = new System.Drawing.Point(578, 19);
+            this.bStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bStart.Name = "bStart";
-            this.bStart.Size = new System.Drawing.Size(94, 29);
+            this.bStart.Size = new System.Drawing.Size(82, 22);
             this.bStart.TabIndex = 6;
             this.bStart.Text = "Start";
             this.bStart.UseVisualStyleBackColor = true;
@@ -112,13 +116,15 @@
             this.idCol,
             this.dateCol,
             this.nameSeatCol});
-            this.dgSeat.Location = new System.Drawing.Point(15, 91);
+            this.dgSeat.Location = new System.Drawing.Point(13, 68);
+            this.dgSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgSeat.Name = "dgSeat";
             this.dgSeat.ReadOnly = true;
             this.dgSeat.RowHeadersWidth = 51;
             this.dgSeat.RowTemplate.Height = 29;
-            this.dgSeat.Size = new System.Drawing.Size(344, 268);
+            this.dgSeat.Size = new System.Drawing.Size(301, 201);
             this.dgSeat.TabIndex = 12;
+            this.dgSeat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSeat_CellContentClick);
             this.dgSeat.SelectionChanged += new System.EventHandler(this.dgSeat_SelectionChanged);
             // 
             // idCol
@@ -158,12 +164,13 @@
             this.nameAccCol,
             this.debeAccCol,
             this.haberAccCol});
-            this.dgMoves.Location = new System.Drawing.Point(380, 91);
+            this.dgMoves.Location = new System.Drawing.Point(332, 68);
+            this.dgMoves.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgMoves.Name = "dgMoves";
             this.dgMoves.ReadOnly = true;
             this.dgMoves.RowHeadersWidth = 51;
             this.dgMoves.RowTemplate.Height = 29;
-            this.dgMoves.Size = new System.Drawing.Size(374, 268);
+            this.dgMoves.Size = new System.Drawing.Size(327, 201);
             this.dgMoves.TabIndex = 13;
             // 
             // idAccCol
@@ -200,9 +207,9 @@
             // 
             // DiaryBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.dgMoves);
             this.Controls.Add(this.dgSeat);
             this.Controls.Add(this.bBack);
@@ -211,8 +218,10 @@
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.bStart);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DiaryBook";
             this.Text = "DiaryBook";
+            this.Load += new System.EventHandler(this.DiaryBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSeat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMoves)).EndInit();
             this.ResumeLayout(false);

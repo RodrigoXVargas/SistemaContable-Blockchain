@@ -29,7 +29,7 @@ namespace capaPresentacion
 
         private void bStart_Click(object sender, EventArgs e)
         {
-            DateTime from = dateFrom.Value.Date;
+            DateTime from = dateFrom.Value.Date; 
             DateTime to = dateTo.Value.Date;
             string acc = comboCuentas.SelectedItem.ToString();
             List<AccountLedger> accounts = new List<AccountLedger>();

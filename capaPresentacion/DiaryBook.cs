@@ -51,5 +51,15 @@ namespace capaPresentacion
             Seat s = (Seat)dgSeat.CurrentRow.DataBoundItem;
             dgMoves.DataSource = s._Account;
         }
+
+        private void dgSeat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DiaryBook_Load(object sender, EventArgs e)
+        {
+            Blockchain blockchain = Base.ReadBlockchain();
+        }
     }
 }

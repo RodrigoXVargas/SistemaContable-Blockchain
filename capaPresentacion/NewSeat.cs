@@ -66,14 +66,14 @@ namespace capaPresentacion
 
             List<Account> accountList = new List<Account>();
 
-            Account account = new Account();
+            
 
             try
             {
                 if (string.IsNullOrEmpty(textBox1.Text)) { throw new InvalidOperationException(""); }
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
                 {
-
+                    Account account = new Account();
 
                     account._Nombre = (string)dataGridView1.Rows[i].Cells[0].FormattedValue;
 
@@ -98,7 +98,6 @@ namespace capaPresentacion
                 Seat seat = new Seat(date_Seat.Value.Date, textBox1.Text, accountList);
                 if (Miner.Validator(seat))
                 {
-                    //Blockchain blockchain = new Blockchain();
                     Blockchain blockchain = Base.ReadBlockchain();
                     Block block = new Block(seat, blockchain);
 
