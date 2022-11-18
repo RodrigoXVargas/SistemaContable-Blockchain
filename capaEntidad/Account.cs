@@ -20,7 +20,7 @@ namespace capaDatos
         {
             
         }
-        public Account(string nombre, float monto, int debeOHaber, string fecha)
+        public Account(string nombre, float monto, int debeOHaber)
         {
             this.nombre = nombre;
 
@@ -34,5 +34,11 @@ namespace capaDatos
             }
         }
 
+        public Account(string nombre, float debe, float haber)
+        {
+            this.nombre = nombre;
+            this.haber = haber;
+            this.debe = debe;
+        }
     }
 }
