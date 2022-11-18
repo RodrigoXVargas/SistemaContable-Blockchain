@@ -56,8 +56,8 @@ namespace capaPresentacion
             float total = 0;
             foreach (AccountTotal account in accounts)
             {
-                account._Total = account._Haber - account._Debe;
-                total += account._Haber - account._Debe;
+                account._Total = account._Debe - account._Haber;
+                total += account._Debe - account._Haber;
             }
             
             dgLedgerTot.DataSource = accounts;
