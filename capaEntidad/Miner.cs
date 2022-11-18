@@ -88,7 +88,7 @@ namespace capaEntidad
                     if (accountSeat._Nombre.Equals(a._Nombre))
                     {
                         a._Haber += accountSeat._Haber;
-                        a._Haber += accountSeat._Haber;
+                        a._Debe += accountSeat._Debe;
 
                     }
                     
@@ -110,6 +110,8 @@ namespace capaEntidad
             {
                 return false;
             }
+
+
         }
     }
 }
