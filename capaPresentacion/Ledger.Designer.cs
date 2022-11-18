@@ -44,10 +44,10 @@
             // bBack
             // 
             this.bBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bBack.Location = new System.Drawing.Point(26, 300);
+            this.bBack.Location = new System.Drawing.Point(13, 297);
             this.bBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(82, 22);
+            this.bBack.Size = new System.Drawing.Size(82, 25);
             this.bBack.TabIndex = 17;
             this.bBack.Text = "Back";
             this.bBack.UseVisualStyleBackColor = true;
@@ -92,10 +92,10 @@
             // bStart
             // 
             this.bStart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bStart.Location = new System.Drawing.Point(26, 152);
+            this.bStart.Location = new System.Drawing.Point(13, 172);
             this.bStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bStart.Name = "bStart";
-            this.bStart.Size = new System.Drawing.Size(82, 22);
+            this.bStart.Size = new System.Drawing.Size(82, 26);
             this.bStart.TabIndex = 12;
             this.bStart.Text = "Start";
             this.bStart.UseVisualStyleBackColor = true;
@@ -121,13 +121,13 @@
             this.dgLedger.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.debeCol,
             this.haberCol});
-            this.dgLedger.Location = new System.Drawing.Point(272, 94);
+            this.dgLedger.Location = new System.Drawing.Point(124, 69);
             this.dgLedger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgLedger.Name = "dgLedger";
             this.dgLedger.ReadOnly = true;
             this.dgLedger.RowHeadersWidth = 51;
             this.dgLedger.RowTemplate.Height = 29;
-            this.dgLedger.Size = new System.Drawing.Size(265, 158);
+            this.dgLedger.Size = new System.Drawing.Size(551, 253);
             this.dgLedger.TabIndex = 19;
             // 
             // debeCol
