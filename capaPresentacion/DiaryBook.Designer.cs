@@ -111,7 +111,7 @@
             this.dgSeat.ReadOnly = true;
             this.dgSeat.RowHeadersWidth = 51;
             this.dgSeat.RowTemplate.Height = 29;
-            this.dgSeat.Size = new System.Drawing.Size(301, 201);
+            this.dgSeat.Size = new System.Drawing.Size(358, 201);
             this.dgSeat.TabIndex = 12;
             this.dgSeat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSeat_CellContentClick);
             this.dgSeat.SelectionChanged += new System.EventHandler(this.dgSeat_SelectionChanged);
@@ -121,20 +121,20 @@
             this.dgMoves.AllowUserToAddRows = false;
             this.dgMoves.AllowUserToDeleteRows = false;
             this.dgMoves.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMoves.Location = new System.Drawing.Point(332, 68);
+            this.dgMoves.Location = new System.Drawing.Point(394, 68);
             this.dgMoves.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgMoves.Name = "dgMoves";
             this.dgMoves.ReadOnly = true;
             this.dgMoves.RowHeadersWidth = 51;
             this.dgMoves.RowTemplate.Height = 29;
-            this.dgMoves.Size = new System.Drawing.Size(327, 201);
+            this.dgMoves.Size = new System.Drawing.Size(386, 201);
             this.dgMoves.TabIndex = 13;
             // 
             // DiaryBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(792, 393);
             this.Controls.Add(this.dgMoves);
             this.Controls.Add(this.dgSeat);
             this.Controls.Add(this.bBack);
@@ -143,8 +143,11 @@
             this.Controls.Add(this.labelTo);
             this.Controls.Add(this.labelFrom);
             this.Controls.Add(this.bStart);
+            this.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DiaryBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DiaryBook";
             this.Load += new System.EventHandler(this.DiaryBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSeat)).EndInit();

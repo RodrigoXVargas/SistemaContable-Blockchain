@@ -51,13 +51,13 @@
             this.dgLedgerTot.AllowUserToAddRows = false;
             this.dgLedgerTot.AllowUserToDeleteRows = false;
             this.dgLedgerTot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLedgerTot.Location = new System.Drawing.Point(26, 39);
+            this.dgLedgerTot.Location = new System.Drawing.Point(12, 39);
             this.dgLedgerTot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgLedgerTot.Name = "dgLedgerTot";
             this.dgLedgerTot.ReadOnly = true;
             this.dgLedgerTot.RowHeadersWidth = 51;
             this.dgLedgerTot.RowTemplate.Height = 29;
-            this.dgLedgerTot.Size = new System.Drawing.Size(506, 199);
+            this.dgLedgerTot.Size = new System.Drawing.Size(556, 199);
             this.dgLedgerTot.TabIndex = 1;
             // 
             // label1
@@ -86,8 +86,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgLedgerTot);
             this.Controls.Add(this.bBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LedgerTotal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LedgerTotal";
             this.Load += new System.EventHandler(this.LedgerTotal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgLedgerTot)).EndInit();
