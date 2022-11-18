@@ -43,10 +43,10 @@
             // bBack
             // 
             this.bBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bBack.Location = new System.Drawing.Point(26, 300);
+            this.bBack.Location = new System.Drawing.Point(13, 301);
             this.bBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(82, 22);
+            this.bBack.Size = new System.Drawing.Size(82, 26);
             this.bBack.TabIndex = 11;
             this.bBack.Text = "Back";
             this.bBack.UseVisualStyleBackColor = true;

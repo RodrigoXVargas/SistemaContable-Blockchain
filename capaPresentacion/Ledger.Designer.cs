@@ -36,6 +36,9 @@
             this.bStart = new System.Windows.Forms.Button();
             this.comboCuentas = new System.Windows.Forms.ComboBox();
             this.dgLedger = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgLedger)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,14 +125,45 @@
             this.dgLedger.ReadOnly = true;
             this.dgLedger.RowHeadersWidth = 51;
             this.dgLedger.RowTemplate.Height = 29;
-            this.dgLedger.Size = new System.Drawing.Size(551, 253);
+            this.dgLedger.Size = new System.Drawing.Size(551, 167);
             this.dgLedger.TabIndex = 19;
+            this.dgLedger.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgLedger_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(124, 238);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 15);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "La suma del debe de esta cuenta es: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(124, 271);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 15);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "La suma del haber de esta cuenta es: ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(124, 302);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 15);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "La suma total de esta cuenta es: ";
             // 
             // Ledger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 338);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgLedger);
             this.Controls.Add(this.comboCuentas);
             this.Controls.Add(this.bBack);
@@ -160,5 +194,8 @@
         private DataGridView dgLedger;
         private DataGridViewTextBoxColumn debeCol;
         private DataGridViewTextBoxColumn haberCol;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
