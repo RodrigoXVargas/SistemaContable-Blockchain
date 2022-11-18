@@ -30,18 +30,17 @@
         {
             this.bBack = new System.Windows.Forms.Button();
             this.dgLedgerTot = new System.Windows.Forms.DataGridView();
-            this.nameAccCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.debeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.haberCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgLedgerTot)).BeginInit();
             this.SuspendLayout();
             // 
             // bBack
             // 
-            this.bBack.Location = new System.Drawing.Point(30, 383);
+            this.bBack.Location = new System.Drawing.Point(26, 287);
+            this.bBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(94, 29);
+            this.bBack.Size = new System.Drawing.Size(82, 22);
             this.bBack.TabIndex = 0;
             this.bBack.Text = "Back";
             this.bBack.UseVisualStyleBackColor = true;
@@ -52,63 +51,48 @@
             this.dgLedgerTot.AllowUserToAddRows = false;
             this.dgLedgerTot.AllowUserToDeleteRows = false;
             this.dgLedgerTot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLedgerTot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameAccCol,
-            this.debeCol,
-            this.haberCol,
-            this.totCol});
-            this.dgLedgerTot.Location = new System.Drawing.Point(30, 52);
+            this.dgLedgerTot.Location = new System.Drawing.Point(26, 39);
+            this.dgLedgerTot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgLedgerTot.Name = "dgLedgerTot";
             this.dgLedgerTot.ReadOnly = true;
             this.dgLedgerTot.RowHeadersWidth = 51;
             this.dgLedgerTot.RowTemplate.Height = 29;
-            this.dgLedgerTot.Size = new System.Drawing.Size(578, 265);
+            this.dgLedgerTot.Size = new System.Drawing.Size(506, 199);
             this.dgLedgerTot.TabIndex = 1;
             // 
-            // nameAccCol
+            // label1
             // 
-            this.nameAccCol.HeaderText = "Name";
-            this.nameAccCol.MinimumWidth = 6;
-            this.nameAccCol.Name = "nameAccCol";
-            this.nameAccCol.ReadOnly = true;
-            this.nameAccCol.Width = 150;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(257, 287);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "TOTAL DE TODAS LAS CUENTAS";
             // 
-            // debeCol
+            // txtTotal
             // 
-            this.debeCol.HeaderText = "Debe";
-            this.debeCol.MinimumWidth = 6;
-            this.debeCol.Name = "debeCol";
-            this.debeCol.ReadOnly = true;
-            this.debeCol.Width = 125;
-            // 
-            // haberCol
-            // 
-            this.haberCol.HeaderText = "Haber";
-            this.haberCol.MinimumWidth = 6;
-            this.haberCol.Name = "haberCol";
-            this.haberCol.ReadOnly = true;
-            this.haberCol.Width = 125;
-            // 
-            // totCol
-            // 
-            this.totCol.HeaderText = "Total";
-            this.totCol.MinimumWidth = 6;
-            this.totCol.Name = "totCol";
-            this.totCol.ReadOnly = true;
-            this.totCol.Width = 125;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(434, 284);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 23);
+            this.txtTotal.TabIndex = 3;
             // 
             // LedgerTotal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 451);
+            this.ClientSize = new System.Drawing.Size(580, 338);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgLedgerTot);
             this.Controls.Add(this.bBack);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LedgerTotal";
             this.Text = "LedgerTotal";
             this.Load += new System.EventHandler(this.LedgerTotal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgLedgerTot)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -116,9 +100,7 @@
 
         private Button bBack;
         private DataGridView dgLedgerTot;
-        private DataGridViewTextBoxColumn nameAccCol;
-        private DataGridViewTextBoxColumn debeCol;
-        private DataGridViewTextBoxColumn haberCol;
-        private DataGridViewTextBoxColumn totCol;
+        private Label label1;
+        private TextBox txtTotal;
     }
 }

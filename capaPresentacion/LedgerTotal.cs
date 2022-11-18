@@ -61,6 +61,7 @@ namespace capaPresentacion
             }
             
             dgLedgerTot.DataSource = accounts;
+            txtTotal.Text = total.ToString();
 
 
         }
