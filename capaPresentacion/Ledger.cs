@@ -54,5 +54,20 @@ namespace capaPresentacion
             }
 
         }
+
+        private void Ledger_Load(object sender, EventArgs e)
+        {
+            Base persistence = new Base();
+
+            foreach (string item in persistence.carga_combo())
+                comboCuentas.Items.Add(item);
+
+
+        }
+
+        private void comboCuentas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
