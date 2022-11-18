@@ -91,5 +91,12 @@ namespace capaPresentacion
         {
 
         }
+
+        private void bTot_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LedgerTotal ldgt = new LedgerTotal();
+            ldgt.Show();
+        }
     }
 }

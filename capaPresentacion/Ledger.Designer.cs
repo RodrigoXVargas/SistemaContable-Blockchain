@@ -160,6 +160,7 @@
             this.bTot.TabIndex = 24;
             this.bTot.Text = "Totales";
             this.bTot.UseVisualStyleBackColor = true;
+            this.bTot.Click += new System.EventHandler(this.bTot_Click);
             // 
             // Ledger
             // 

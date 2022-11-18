@@ -21,7 +21,9 @@ namespace capaPresentacion
 
         private void bBack_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Ledger l = new Ledger();
+            l.Show();
         }
 
         private void LedgerTotal_Load(object sender, EventArgs e)
