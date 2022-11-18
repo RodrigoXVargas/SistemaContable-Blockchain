@@ -55,7 +55,7 @@ namespace capaPresentacion
                 int sumHaber = 0;
                 int sumTotal = 0;
 
-                for (int i = 0; i < dgLedger.Rows.Count - 1; i++)
+                for (int i = 0; i < dgLedger.Rows.Count; i++)
                 {
 
                     sumDebe += Convert.ToInt32(dgLedger.Rows[i].Cells[0].FormattedValue);
