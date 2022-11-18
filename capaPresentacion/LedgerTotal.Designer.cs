@@ -29,43 +29,41 @@
         private void InitializeComponent()
         {
             this.bBack = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgLedgerTot = new System.Windows.Forms.DataGridView();
             this.nameAccCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.debeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.haberCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLedgerTot)).BeginInit();
             this.SuspendLayout();
             // 
             // bBack
             // 
-            this.bBack.Location = new System.Drawing.Point(227, 270);
-            this.bBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bBack.Location = new System.Drawing.Point(30, 383);
             this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(82, 22);
+            this.bBack.Size = new System.Drawing.Size(94, 29);
             this.bBack.TabIndex = 0;
             this.bBack.Text = "Back";
             this.bBack.UseVisualStyleBackColor = true;
             this.bBack.Click += new System.EventHandler(this.bBack_Click);
             // 
-            // dataGridView1
+            // dgLedgerTot
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgLedgerTot.AllowUserToAddRows = false;
+            this.dgLedgerTot.AllowUserToDeleteRows = false;
+            this.dgLedgerTot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLedgerTot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameAccCol,
             this.debeCol,
             this.haberCol,
             this.totCol});
-            this.dataGridView1.Location = new System.Drawing.Point(26, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(508, 199);
-            this.dataGridView1.TabIndex = 1;
+            this.dgLedgerTot.Location = new System.Drawing.Point(30, 52);
+            this.dgLedgerTot.Name = "dgLedgerTot";
+            this.dgLedgerTot.ReadOnly = true;
+            this.dgLedgerTot.RowHeadersWidth = 51;
+            this.dgLedgerTot.RowTemplate.Height = 29;
+            this.dgLedgerTot.Size = new System.Drawing.Size(578, 265);
+            this.dgLedgerTot.TabIndex = 1;
             // 
             // nameAccCol
             // 
@@ -101,16 +99,15 @@
             // 
             // LedgerTotal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 338);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(663, 451);
+            this.Controls.Add(this.dgLedgerTot);
             this.Controls.Add(this.bBack);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LedgerTotal";
             this.Text = "LedgerTotal";
             this.Load += new System.EventHandler(this.LedgerTotal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgLedgerTot)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,7 +115,7 @@
         #endregion
 
         private Button bBack;
-        private DataGridView dataGridView1;
+        private DataGridView dgLedgerTot;
         private DataGridViewTextBoxColumn nameAccCol;
         private DataGridViewTextBoxColumn debeCol;
         private DataGridViewTextBoxColumn haberCol;

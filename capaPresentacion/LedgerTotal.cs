@@ -56,6 +56,7 @@ namespace capaPresentacion
                 total += account._Haber - account._Debe;
             }
             
+            dgLedgerTot.DataSource = accounts;
 
 
         }
