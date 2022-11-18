@@ -59,7 +59,7 @@ namespace capaPresentacion
                 {
 
                     sumDebe += Convert.ToInt32(dgLedger.Rows[i].Cells[0].FormattedValue);
-                    sumHaber += Convert.ToInt32(dgLedger.Rows[i].Cells[0].FormattedValue);
+                    sumHaber += Convert.ToInt32(dgLedger.Rows[i].Cells[1].FormattedValue);
 
                 }
 
