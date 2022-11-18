@@ -35,14 +35,7 @@
             this.labelFrom = new System.Windows.Forms.Label();
             this.bStart = new System.Windows.Forms.Button();
             this.dgSeat = new System.Windows.Forms.DataGridView();
-            this.idCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameSeatCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgMoves = new System.Windows.Forms.DataGridView();
-            this.idAccCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameAccCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.debeAccCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.haberAccCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgSeat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMoves)).BeginInit();
             this.SuspendLayout();
@@ -112,10 +105,6 @@
             this.dgSeat.AllowUserToAddRows = false;
             this.dgSeat.AllowUserToDeleteRows = false;
             this.dgSeat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSeat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCol,
-            this.dateCol,
-            this.nameSeatCol});
             this.dgSeat.Location = new System.Drawing.Point(13, 68);
             this.dgSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgSeat.Name = "dgSeat";
@@ -127,43 +116,11 @@
             this.dgSeat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSeat_CellContentClick);
             this.dgSeat.SelectionChanged += new System.EventHandler(this.dgSeat_SelectionChanged);
             // 
-            // idCol
-            // 
-            this.idCol.HeaderText = "ID";
-            this.idCol.MinimumWidth = 6;
-            this.idCol.Name = "idCol";
-            this.idCol.ReadOnly = true;
-            this.idCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.idCol.Width = 50;
-            // 
-            // dateCol
-            // 
-            this.dateCol.HeaderText = "Date";
-            this.dateCol.MinimumWidth = 6;
-            this.dateCol.Name = "dateCol";
-            this.dateCol.ReadOnly = true;
-            this.dateCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dateCol.Width = 120;
-            // 
-            // nameSeatCol
-            // 
-            this.nameSeatCol.HeaderText = "Seat Name";
-            this.nameSeatCol.MinimumWidth = 6;
-            this.nameSeatCol.Name = "nameSeatCol";
-            this.nameSeatCol.ReadOnly = true;
-            this.nameSeatCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nameSeatCol.Width = 120;
-            // 
             // dgMoves
             // 
             this.dgMoves.AllowUserToAddRows = false;
             this.dgMoves.AllowUserToDeleteRows = false;
             this.dgMoves.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMoves.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idAccCol,
-            this.nameAccCol,
-            this.debeAccCol,
-            this.haberAccCol});
             this.dgMoves.Location = new System.Drawing.Point(332, 68);
             this.dgMoves.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgMoves.Name = "dgMoves";
@@ -172,38 +129,6 @@
             this.dgMoves.RowTemplate.Height = 29;
             this.dgMoves.Size = new System.Drawing.Size(327, 201);
             this.dgMoves.TabIndex = 13;
-            // 
-            // idAccCol
-            // 
-            this.idAccCol.HeaderText = "ID";
-            this.idAccCol.MinimumWidth = 6;
-            this.idAccCol.Name = "idAccCol";
-            this.idAccCol.ReadOnly = true;
-            this.idAccCol.Width = 50;
-            // 
-            // nameAccCol
-            // 
-            this.nameAccCol.HeaderText = "Name";
-            this.nameAccCol.MinimumWidth = 6;
-            this.nameAccCol.Name = "nameAccCol";
-            this.nameAccCol.ReadOnly = true;
-            this.nameAccCol.Width = 110;
-            // 
-            // debeAccCol
-            // 
-            this.debeAccCol.HeaderText = "Debe";
-            this.debeAccCol.MinimumWidth = 6;
-            this.debeAccCol.Name = "debeAccCol";
-            this.debeAccCol.ReadOnly = true;
-            this.debeAccCol.Width = 80;
-            // 
-            // haberAccCol
-            // 
-            this.haberAccCol.HeaderText = "Haber";
-            this.haberAccCol.MinimumWidth = 6;
-            this.haberAccCol.Name = "haberAccCol";
-            this.haberAccCol.ReadOnly = true;
-            this.haberAccCol.Width = 80;
             // 
             // DiaryBook
             // 
@@ -239,12 +164,5 @@
         private Button bStart;
         private DataGridView dgSeat;
         private DataGridView dgMoves;
-        private DataGridViewTextBoxColumn idCol;
-        private DataGridViewTextBoxColumn dateCol;
-        private DataGridViewTextBoxColumn nameSeatCol;
-        private DataGridViewTextBoxColumn idAccCol;
-        private DataGridViewTextBoxColumn nameAccCol;
-        private DataGridViewTextBoxColumn debeAccCol;
-        private DataGridViewTextBoxColumn haberAccCol;
     }
 }

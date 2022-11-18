@@ -36,8 +36,6 @@
             this.bStart = new System.Windows.Forms.Button();
             this.comboCuentas = new System.Windows.Forms.ComboBox();
             this.dgLedger = new System.Windows.Forms.DataGridView();
-            this.debeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.haberCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgLedger)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,9 +116,6 @@
             this.dgLedger.AllowUserToAddRows = false;
             this.dgLedger.AllowUserToDeleteRows = false;
             this.dgLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLedger.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.debeCol,
-            this.haberCol});
             this.dgLedger.Location = new System.Drawing.Point(124, 69);
             this.dgLedger.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgLedger.Name = "dgLedger";
@@ -129,22 +124,6 @@
             this.dgLedger.RowTemplate.Height = 29;
             this.dgLedger.Size = new System.Drawing.Size(551, 253);
             this.dgLedger.TabIndex = 19;
-            // 
-            // debeCol
-            // 
-            this.debeCol.HeaderText = "Debe";
-            this.debeCol.MinimumWidth = 6;
-            this.debeCol.Name = "debeCol";
-            this.debeCol.ReadOnly = true;
-            this.debeCol.Width = 125;
-            // 
-            // haberCol
-            // 
-            this.haberCol.HeaderText = "Haber";
-            this.haberCol.MinimumWidth = 6;
-            this.haberCol.Name = "haberCol";
-            this.haberCol.ReadOnly = true;
-            this.haberCol.Width = 125;
             // 
             // Ledger
             // 
