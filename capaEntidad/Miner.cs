@@ -30,7 +30,7 @@ namespace capaEntidad
             {
                 byte[] encodedText = new UTF8Encoding().GetBytes(text);
                 byte[] myHashArray = mySHA256.ComputeHash(encodedText);
-                myHashCalculated = BitConverter.ToString(myHashArray).Replace("-", String.Empty);          //Replace("-", string.Empty) ==> el byte array tiene guines en medio(segun el que explica en el video), esta funcion quita los guiones
+                myHashCalculated = BitConverter.ToString(myHashArray).Replace("-", String.Empty);
 
             }
             return myHashCalculated;
@@ -45,14 +45,12 @@ namespace capaEntidad
         public static String MineBlock(Seat seat)
         {
             String hash = "";
-            int proof = 0;
-            String text = String.Format("{0}{1}{2}", seat._Date, seat._HashSeat, proof);
-            
+            int proof = 0;            
             String zeros = String.Empty.PadLeft(dificultad, '0');
 
             do
             {
-                text = String.Format("{0}{1}{2}", seat._Date, seat._HashSeat, proof);
+                String text = String.Format("{0}{1}{2}", seat._Date, seat._HashSeat, proof);
                 hash = Miner.CalculateHash(text);
                 proof++;
             } while (!hash.StartsWith(zeros));
