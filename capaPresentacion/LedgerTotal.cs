@@ -1,4 +1,5 @@
 ﻿using capaDatos;
+using capaEntidad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,11 +29,11 @@ namespace capaPresentacion
             Base Base = new Base();
             List<String> listNames = Base.carga_combo();
             Blockchain blockchain = Base.ReadBlockchain();
-            List<Account> accounts = new List<Account>();
+            List<AccountTotal> accounts = new List<AccountTotal>();
 
             foreach (String nameAccount in listNames)
             {
-                Account account = new Account();
+                AccountTotal account = new AccountTotal();
                 account._Nombre = nameAccount;
                 account._Haber = 0;
                 account._Debe = 0;
@@ -51,8 +52,9 @@ namespace capaPresentacion
 
             }
             float total = 0;
-            foreach (Account account in accounts)
+            foreach (AccountTotal account in accounts)
             {
+                account._Total = account._Haber - account._Debe;
                 total += account._Haber - account._Debe;
             }
             
