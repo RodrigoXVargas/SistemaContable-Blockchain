@@ -111,8 +111,6 @@ namespace capaPresentacion
                     MessageBox.Show("Datos erroneos");
                 }
 
-                                
-
             }
             catch
             {
