@@ -18,8 +18,6 @@ namespace capaDatos
         public List<Block> _Blocks { get => blocks; set => blocks = value; }
         public List<Seat> _TempAccount { get => tempAccount; set => tempAccount = value; }
 
-        
-
         public Blockchain()
         {
         }
