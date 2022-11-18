@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using capaEntidad;
 
 namespace capaEntidad
 {
@@ -59,8 +60,9 @@ namespace capaEntidad
         }
 
 
-        public static bool Validator(Seat seat)
+        public static bool Validator(Seat seat, Blockchain blockchain)
         {
+            
             return true;
         }
     }

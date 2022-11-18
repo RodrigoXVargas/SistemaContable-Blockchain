@@ -94,11 +94,10 @@ namespace capaPresentacion
 
                     accountList.Add(account);
                 }
-
+                Blockchain blockchain = Base.ReadBlockchain();
                 Seat seat = new Seat(date_Seat.Value.Date, textBox1.Text, accountList);
-                if (Miner.Validator(seat))
+                if (Miner.Validator(seat, blockchain))
                 {
-                    Blockchain blockchain = Base.ReadBlockchain();
                     Block block = new Block(seat, blockchain);
 
                     blockchain._Blocks.Add(block);
